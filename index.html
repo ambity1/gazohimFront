@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="/assets/style/style.css" rel="stylesheet" >
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container d-flex flex-row justify-content-between align-items-center">
+            <a class="logo">
+                <picture>
+                    <source srcset="/assets/img/header/smllogohead.svg" media="(max-width: 1400px)">
+                    <source srcset="/assets/img/header/logohead.svg" media="(min-width: 1400px)">
+                    <img src="/assets/img/header/logohead.svg">
+                </picture>
+            </a>
+            <nav class="d-flex flex-row align-items-center">
+                <div class="dropdown elemfirst d-none d-sm-none d-lg-block">
+                    <a href="#" class="d-flex flex-row">
+                        Наши направления
+                        <img src="/assets/img/imgVar/chevron-down-blue.svg">
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="item">
+                            <div class="d-flex flex-column">
+                                <a href="#">Инжиниринг</a>
+                                <ul>
+                                    <li><a href="#">Комплексный инжиниринг</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <a href="#">Технологии</a>
+                                <ul>
+                                    <li><a href="#">Водородные технологии</a></li>
+                                    <li><a href="#">Цифровые технологии</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <a href="#">Исследования</a>
+                                <ul>
+                                    <li><a href="#">Наноинженерия</a></li>
+                                    <li><a href="#">Нейротехнологии</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="d-none d-sm-none d-lg-flex d-xxl-none">Проекты</a>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Новости</a>
+                <a href="#" class="d-none d-sm-none d-lg-none d-xxl-flex">Презентации</a>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Карьера</a>
+                <div class="dropdown elemsecond d-none d-sm-none d-lg-none d-xxl-block">
+                    <a href="#">О компании</a>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">История компании</a></li>
+                            <li><a href="#">Экспериментальная база</a></li>
+                            <li><a href="#">Сертификаты</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Контакты</a>
+                <button class="burger d-lg-flex d-xxl-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                    <div class="offcanvas-header">
+                        <a data-bs-dismiss="offcanvas" aria-label="Закрыть"><img src="/assets/img/header/x.svg"></a>
+                    </div>
+                    <div class="offcanvas-body">
+                        <nav class="d-flex flex-column align-items-start">
+                            <div class="off-item d-flex flex-column">
+                                <a href="#">Наши направления <img class="d-none d-sm-block" src="/assets/img/imgVar/chevron-down-white.svg"> <img class="d-block d-sm-none" class="" src="/assets/img/imgVar/smlchevron-down-white.svg"></a>
+                                <ul>
+                                    <li><a href="#">Инжиниринг</a></li>
+                                    <li><a href="#">Технологии</a></li>
+                                    <li><a href="#">Исследования</a></li>
+                                </ul>
+                            </div>
+                            <a href="#">Проекты</a>
+                            <a href="#">Документы</a>
+                            <a href="#">Новости</a>
+                            <a href="#">Карьера</a>
+                            <div class="off-item d-flex flex-column">
+                                <a href="#">О компании <img class="d-none d-sm-block" src="/assets/img/imgVar/chevron-down-white.svg"> <img class="d-block d-sm-none" class="" src="/assets/img/imgVar/smlchevron-down-white.svg"></a>
+                                <ul>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">История компании</a></li>
+                                    <li><a href="#">Документы</a></li>
+                                </ul>
+                            </div>
+                            <a href="#">Контакты</a>
+                            <div class="off-contacts d-flex flex-column">
+                                <a class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/map-pin.svg"> <p>г. Уфа, улица Авроры,<br> д2 - головной офис</p></a>
+                                <!--<div class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/map-pin.svg"><p>г. Москва, улица, д</p></div>-->
+                                <a href="tel:+73472940246" class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/phone.svg"><p>+7 (347) 294-02-46</p></a>
+                                <a href="tel:+74999111101" class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/phone.svg"><p>+7 (499) 911-11-01</p></a>
+                                <a href="mailto:mail@gashemeng.ru" class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/mail.svg"><p>mail@gashemeng.ru</p></a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <a href="#" class="tgwidget">
+        <div class="position-relative">
+            <img class="position-absolute d-none d-sm-block icon" src="/assets/img/imgVar/tgvector.svg">
+            <img class="position-absolute d-none d-sm-block back" src="/assets/img/imgVar/ellipse.svg">
+            <div class="position-absolute d-none d-sm-block textblock"><img class="text" src="/assets/img/imgVar/text.svg"></div>
+            <img class="position-absolute d-block d-sm-none icon" src="/assets/img/imgVar/smltgvector.svg">
+            <img class="position-absolute d-block d-sm-none back" src="/assets/img/imgVar/smlellipse.svg">
+            <div class="position-absolute d-block d-sm-none textblock"><img class="text" src="/assets/img/imgVar/smltext.svg"></div>
+        </div>
+    </a>
+    <main>
+        <section class="main-banner"> 
+            <div class="main-banner-back position-relative">
+                <picture>
+                    <source srcset="/assets/img/main-banner/main-banner-320.webp" media="(max-width: 576px)">
+                    <source srcset="/assets/img/main-banner/main-banner-576.webp" media="(max-width: 992px) and (min-width: 576px)">
+                    <source srcset="/assets/img/main-banner/main-banner-992.webp" media="(max-width: 1400px) and (min-width: 992px)">
+                    <source srcset="/assets/img/main-banner/main-banner-1440.webp" media="(min-width: 1400px)">
+                    <img src="/assets/img/main-banner/main-banner-1440.webp">
+                </picture>
+            </div>
+            <div class="container d-flex flex-row justify-content-center">
+                <div class="title-banner d-flex flex-column justify-content-center">
+                        <h1>Эффективные решения для сложных задач</h1>
+                    <div>
+                        <p>Комплексный инжиниринг в области нефтехимпереработки и нефтехимии, цифровые технологии с применением искусственного интеллекта и анализа данных, <span>одни из первых на рынке РФ начали осознанное развитие направления энергоперехода</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="centred-competencies">
+            <div class="competencies-blocks">
+                <div class="container">
+                    <div class="competencies-header">
+                        <h2>Наши компетенции</h2>
+                        <div class="competencies-header-btns d-sm-flex d-none">
+                            <div class="swiper-button-prev swiper-button-prev-competencies"><img class="d-none d-sm-block" src="/assets/img/imgVar/left-arrow-blue.svg"><img class="d-block d-sm-none" src="/assets/img/imgVar/smlleft-arrow-blue.svg"></div>
+                            <div class="swiper-button-next swiper-button-next-competencies"><img class="d-none d-sm-block" src="/assets/img/imgVar/right-arrow-blue.svg"><img class="d-block d-sm-none" src="/assets/img/imgVar/smlright-arrow-blue.svg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-sm">
+                    <div class="competencies-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="competencies-slide">
+                                    <div class="competencies-slide-back">
+                                        <img src="/assets/img/competencies/icon.webp">
+                                        <div class="competencies-slide-block">
+                                            <span>[01]</span>
+                                            <div class="competencies-slide-block-text d-flex flex-column">
+                                                <h3>Исследования сырья</h3>
+                                                <p>Определяем возможности переработки сырья с помощью современных аналитических методов для повышения эффективности производственных процессов</p>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="competencies-slide">
+                                    <div class="competencies-slide-back">
+                                        <img src="/assets/img/competencies/icon.webp">
+                                        <div class="competencies-slide-block">
+                                            <span>[02]</span>
+                                            <div class="competencies-slide-block-text d-flex flex-column">
+                                                <h3>Аудит технологических процессов</h3>
+                                                <p>Оцениваем работу производственных предприятий, выявляем потенциальные точки роста и оптимизируем существующие технологические решения</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="competencies-slide">
+                                    <div class="competencies-slide-back">
+                                        <img src="/assets/img/competencies/icon.webp">
+                                        <div class="competencies-slide-block">
+                                            <span>[03]</span>
+                                            <div class="competencies-slide-block-text d-flex flex-column">
+                                                <h3>Концептуальное проектирование</h3>
+                                                <p>Разрабатываем концепции производственных процессов и проводим технико-экономический анализ для обоснования инвестиционной привлекательности проектов</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="competencies-slide">
+                                    <div class="competencies-slide-back">
+                                        <img src="/assets/img/competencies/icon.webp">
+                                        <div class="competencies-slide-block">
+                                            <span>[04]</span>
+                                            <div class="competencies-slide-block-text d-flex flex-column">
+                                                <h3>Поставка оборудования</h3>
+                                                <p>Организуем поставки специализированного оборудования, соответствующего самым высоким отраслевым требованиям качества.</p>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="competencies-slide">
+                                    <div class="competencies-slide-back">
+                                        <img src="/assets/img/competencies/icon.webp">
+                                        <div class="competencies-slide-block">
+                                            <span>[05]</span>
+                                            <div class="competencies-slide-block-text d-flex flex-column">
+                                                <h3>Разработка технологического процесса (PED)</h3>
+                                                <p>Проектируем и совершенствуем технологические процессы, ориентируясь на передовые стандарты и практики отрасли.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="competencies-slide">
+                                    <div class="competencies-slide-back">
+                                        <img src="/assets/img/competencies/icon.webp">
+                                        <div class="competencies-slide-block">
+                                            <span>[06]</span>
+                                            <div class="competencies-slide-block-text d-flex flex-column">
+                                                <h3>Автоматизированное проектирование, управление данными (PDM)</h3>
+                                                <p>Применяем АИС для создания проектной документации, эффективного управления информацией и интеграции баз данных</p>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="competencies-slide">
+                                    <div class="competencies-slide-back">
+                                        <img src="/assets/img/competencies/icon.webp">
+                                        <div class="competencies-slide-block">
+                                            <span>[07]</span>
+                                            <div class="competencies-slide-block-text d-flex flex-column">
+                                                <h3>Консультационное управление проектом (PMC) и обучение персонала</h3>
+                                                <p>Оказываем экспертную поддержку в управлении проектами, сопровождаем реализацию задач и проводим обучение специалистов.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container competencies-header-btns d-sm-none d-flex">
+                    <div class="swiper-button-prev swiper-button-prev-competencies"><img class="d-none d-sm-block" src="/assets/img/imgVar/left-arrow-blue.svg"><img class="d-block d-sm-none" src="/assets/img/imgVar/smlleft-arrow-blue.svg"></div>
+                    <div class="swiper-button-next swiper-button-next-competencies"><img class="d-none d-sm-block" src="/assets/img/imgVar/right-arrow-blue.svg"><img class="d-block d-sm-none" src="/assets/img/imgVar/smlright-arrow-blue.svg"></div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const swiper2 = new Swiper('.competencies-swiper', {
+                    direction: 'horizontal',
+                    loop: false,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1.2,
+                        },
+
+                        576: {
+                            slidesPerView: 2,
+                        },
+
+                        992: {
+                            slidesPerView: 3,
+                        },
+                        1400: {
+                            slidesPerView: 4,
+                        },
+                    },
+
+                    navigation: {
+                        nextEl: '.swiper-button-next-competencies',
+                        prevEl: '.swiper-button-prev-competencies',
+                    },
+                })
+            })
+        </script>
+        <section class="centred-trend">
+            <div class="trend-back position-relative">
+                <img class="trend-back-vecone d-none d-xxl-block" src="/assets/img/trend/vector1.webp">
+                <img class="trend-back-vecone d-none d-lg-block d-xxl-none" src="/assets/img/trend/vector1-1000.webp">
+                <img class="trend-back-vecone d-none d-sm-block d-lg-none" src="/assets/img/trend/vector1-576.webp">
+                <img class="trend-back-vecone d-block d-sm-none" src="/assets/img/trend/vector1-320.webp">
+            </div>
+            <div class="container">
+                <div class="trend-block d-flex flex-column">
+                    <h2>Направления Газохим инжиниринг</h2>
+                    <div class="trend-blocks">
+                        <div class="trend-block-cards trend-block-cards-1">
+                            <a class="trend-block-card d-flex flex-column">
+                                <picture>
+                                    <img src="/assets/img/trend/trend1.webp">
+                                </picture>
+                                <div class="trend-block-text d-flex flex-column">
+                                    <h3>Инжиниринг</h3>
+                                    <p>EP, EPC, EPCM</p>
+                                </div>
+                            </a>
+                            <a class="trend-block-card d-flex flex-column">
+                                <picture>
+                                    <img src="/assets/img/trend/trend2.webp">
+                                </picture>
+                                <div class="trend-block-text d-flex flex-column">
+                                    <h3>Цифровые решения</h3>
+                                    <p>Уникальные технологии</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="trend-block-cards trend-block-cards-2">
+                            <a class="trend-block-card d-flex flex-column">
+                                <picture>
+                                    <img src="/assets/img/trend/trend3.webp">
+                                </picture>
+                                <div class="trend-block-text d-flex flex-column">
+                                    <h3>Создание нефтегазохимических</br> процессов</h3>
+                                    <p>НИОКР/R&D</p>
+                                </div>
+                            </a>
+                            <a class="trend-block-card d-flex flex-column">
+                                <picture>
+                                    <img src="/assets/img/trend/trend4.webp">
+                                </picture>
+                                <div class="trend-block-text d-flex flex-column">
+                                    <h3>Водородные технологии</h3>
+                                    <p>Энергопереход</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="centred-company">
+            <div class="company-back position-relative">
+                <img class="company-back-vecone d-none d-xxl-block" src="/assets/img/company/vector1.webp">
+                <img class="company-back-vecone d-none d-lg-block d-xxl-none" src="/assets/img/company/vector1-1000.webp">
+                <img class="company-back-vecone d-none d-sm-block d-lg-none" src="/assets/img/company/vector1-576.webp">
+                <img class="company-back-vecone d-block d-sm-none" src="/assets/img/company/vector1-320.webp">
+            </div>
+            <div class="container">
+                <div class="company-block">
+                    <div class="company-block-icons position-relative">
+                        <picture class="company-block-icons-icon position-absolute">
+                            <source srcset="/assets/img/company/icon-320.svg" media="(max-width: 576px)">
+                            <source srcset="/assets/img/company/icon-576.svg" media="(max-width: 992px) and (min-width: 576px)">
+                            <source srcset="/assets/img/company/icon-1000.svg" media="(max-width: 1400px) and (min-width: 992px)">
+                            <source  srcset="/assets/img/company/icon-1400.svg" media="(min-width: 1400px)">
+                            <img src="/assets/img/company/icon-1400.svg">
+                        </picture>
+                        <picture class="company-block-icons-oval position-absolute">
+                            <source srcset="/assets/img/company/oval-320.svg" media="(max-width: 576px)">
+                            <source srcset="/assets/img/company/oval-576.svg" media="(max-width: 992px) and (min-width: 576px)">
+                            <source srcset="/assets/img/company/oval-1000.svg" media="(max-width: 1400px) and (min-width: 992px)">
+                            <source  srcset="/assets/img/company/oval-1400.svg" media="(min-width: 1400px)">
+                            <img src="/assets/img/company/oval-1400.svg">
+                        </picture>
+                        <picture class="company-block-icons-textlogo position-absolute">
+                            <source srcset="/assets/img/company/textlogo-320.svg" media="(max-width: 576px)">
+                            <source srcset="/assets/img/company/textlogo-576.svg" media="(max-width: 992px) and (min-width: 576px)">
+                            <source srcset="/assets/img/company/textlogo-1000.svg" media="(max-width: 1400px) and (min-width: 992px)">
+                            <source  srcset="/assets/img/company/textlogo-1400.svg" media="(min-width: 1400px)">
+                            <img src="/assets/img/company/textlogo-1400.svg">
+                        </picture>
+                    </div>
+                    <div class="company-block-text d-flex flex-column align-items-start">
+                        <h2>Газохим Инжиниринг</h2>
+                        <p>Сегодня мы специализируемся на инжиниринге полного цикла в химической, нефтегазохимической и энергетической сфере. <br><br>
+                            Разрабатываем опережающие технологии основного органического и нефтехимического синтеза с использованием принципов «зеленой» химии, а также в области водородной энергетики и снижения углеродного следа (CCS/CCUS/DAC).</p>
+                        <button class="button-main"> Подробнее <img src="/assets/img/imgVar/arrow-right-white.svg"> </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="centred-command">
+            <div class="command-back position-relative">
+                <img class="command-back-vecone d-none d-xxl-block" src="/assets/img/command/vector1.webp">
+                <img class="command-back-vectwo d-none d-xxl-block" src="/assets/img/command/vector2.webp">
+                <img class="command-back-vectwo d-none d-lg-block d-xxl-none" src="/assets/img/command/vector2-1000.webp">
+                <img class="command-back-vectwo d-none d-sm-block d-lg-none" src="/assets/img/command/vector2-576.webp">
+                <img class="command-back-vectwo d-block d-sm-none" src="/assets/img/command/vector2-320.webp">
+            </div>
+            <div class="container">
+                <div class="command-block d-flex flex-column align-items-end">
+                    <h2><span>Наша команда -</span> <br>талантливые и увлеченные специалисты, умеющие быстро решать сложные задачи</h2>
+                    <div class="d-flex flex-row">
+                        <div class="command-block-back">
+                            <img class="d-none d-xxl-block" src="/assets/img/command/1.svg">
+                        </div>
+                        <div class="command-block-cards">
+                            <div class="command-block-card d-flex flex-column align-items-md-start align-items-end">
+                                <p>Специалистов в штате</p>
+                                <span>50+</span>
+                            </div>
+                            <div class="command-block-card d-flex flex-column align-items-md-start align-items-end">
+                                <p>Работаем с 2017 года</p>
+                                <span>8 лет</span>
+                            </div>
+                            <div class="command-block-card d-flex flex-column align-items-md-start align-items-end">
+                                <p>Проектов выполнено</p>
+                                <span>40+</span>
+                            </div>
+                            <div class="command-block-card d-flex flex-column align-items-md-start align-items-end">
+                                <p>Аккредитованная</p>
+                                <span>IT-компания</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="centred-project">
+            <div class="project-back position-relative">
+                <img class="project-back-vecone d-none d-xxl-block" src="/assets/img/project/vector1.webp">
+                <img class="project-back-vecone d-none d-lg-block d-xxl-none" src="/assets/img/project/vector1-1000.webp">
+                <img class="project-back-vectwo d-none d-xxl-block" src="/assets/img/project/vector2.webp">
+                <img class="project-back-vectwo d-none d-lg-block d-xxl-none" src="/assets/img/project/vector2-1000.webp">
+                <img class="project-back-vectwo d-none d-sm-block d-lg-none" src="/assets/img/project/vector2-576.webp">
+                <img class="project-back-vectwo d-block d-sm-none" src="/assets/img/project/vector2-320.webp">
+            </div>
+            <div class="container">
+                <div class="project-block d-flex flex-column">
+                    <div class="project-block-title d-flex flex-row justify-content-between align-items-center">
+                        <h2>Реализованные <span>проекты</span></h2>
+                        <div class="project-block-title-btns d-none d-sm-flex flex-row">
+                            <div class="swiper-button-prev swiper-button-prev-project"><img class="d-none d-sm-flex" src="/assets/img/imgVar/left-arrow-blue.svg"><img class="d-flex d-sm-none" src="/assets/img/imgVar/smlleft-arrow-blue.svg"></div>
+                            <div class="swiper-button-next swiper-button-next-project"><img class="d-none d-sm-flex" src="/assets/img/imgVar/right-arrow-blue.svg"><img class="d-flex d-sm-none" src="/assets/img/imgVar/smlright-arrow-blue.svg"></div>
+                        </div>
+                    </div>
+                    <div class="project-block-slider">
+                        <div class="swiper swiper-project">
+                            <div class="swiper-wrapper">   
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-lukoil.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>“ЛУКОЙЛ-Нижегороднефтеоргсинтез”</h3>
+                                            <p>Разработка технических решений по переработке пропилена на установках производства бензина кислотным алкилированием</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-titan.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ГК “ТИТАН”</h3>
+                                            <p>Установка и получение винил-н-бутилового эфира (по безацетиленовой технологии); разработка расширенного базового проекта, разработка рабоче-конструкторской документации на около 100 позиций оборудования, отбор и технический аудит изготовителя оборудования</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-rosneft.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ООО “РН-ЦИР”</h3>
+                                            <p>Техническое перевооружение установки легкого гидрокрекинга Л-24/6 (поток 1) АО “КНПЗ” в условиях работы установки в режиме изодепарафинизации с использованием катализаторов изодепарафинизации и гидрофинишинга</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-intertrans.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ТОО “INTERTRANS C.А.”</h3>
+                                            <p>Технология алкилирования изобутана олефинами в среде ионной жидкости и сравнительный анализ с ЖК И ТК-алкилированием</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-titan.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ГК “ТИТАН”</h3>
+                                            <p>Конденсация спиртов С4 с ацетальдегидом; оксиэтилирования спиртов С4 в сверхкритических условиях; дезалкоксилиривание дибутилацеталя с получением непредельных эфиров</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-mechel.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ПАО “Челябинский металлургический комбинат”</h3>
+                                            <p>Проектирование объекта капитального строительства ПАО “ЧМК”. Газовый цех. Газосбросное устройство для сжигания избытков доменного газа.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-autoplast.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ООО “Автопласт”</h3>
+                                            <p>Базовый проект процесса производства полиизоцианата на основе данных пилотных и лабораторных испытаний для дальнейшего проектирования и строительства</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-autoplast.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ООО “Автопласт”</h3>
+                                            <p>Внедрение системы компьютерного зрения для оптимизации работы роботов манипуляторов</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-gazprom.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ООО “Газпромнефть - промышленные инновации”</h3>
+                                            <p>Разработка базового проекта установки получения метилэтиленкетона окислением бутан-бутиленовой фракции закисью азота мощностью 100т/год по целевому продукту</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-ink.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ООО “Иркутская нефтяная компания”</h3>
+                                            <p>Выполнение технико-экономической оценки стоимости и времени строительства трубопровода для сброса ПНГ с ДКС-3 в факельную систему УПН ЯНГКМ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-norkem.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ООО “Завод синтанолов”</h3>
+                                            <p>Техническое перевооружение производственного помещения в помещение исследовательской лаборатории органического синтеза</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-gazprom.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ООО “Газпромнефть - промышленные инновации”</h3>
+                                            <p>Разработка основных технологических решений установки получения метилэтиленкетона окислением бутан-бутиленовой фракции закисью азота мощностью 30 тонн в год по целевому продукту </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-ink.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ООО “Иркутская нефтяная компания”</h3>
+                                            <p>Техническое перевооружение УКПГ-2. Модернизация АСУ ТП</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-autoplast.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ООО “Автопласт”</h3>
+                                            <p>Производство полиизоцианата по комбинированной бесфосгенной технологии в составе двух производственных линий</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-ink.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ООО “Иркутская нефтяная компания”</h3>
+                                            <p>Техническое перевооружение КПХиО СГиК. Перемычка от линии СОГ на котельную поз. 1.16 в линию подачи затворного газа от испарителей поз. И-1/1, И-1/2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <picture>
+                                            <img src="/assets/img/project/slide-ink.svg">
+                                        </picture>
+                                        <div class="d-flex flex-column">
+                                            <h3>ООО “Иркутская нефтяная компания”</h3>
+                                            <p>Разработка технического решения по подключению коллеткорного всаса КУ-104/1,2,3 с перенаправлением тройника вверх, для снижения проброса жидкости</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-block-title-btns d-flex d-sm-none flex-row">
+                        <div class="swiper-button-prev swiper-button-prev-project"><img class="d-none d-sm-flex" src="/assets/img/imgVar/left-arrow-blue.svg"><img class="d-flex d-sm-none" src="/assets/img/imgVar/smlleft-arrow-blue.svg"></div>
+                        <div class="swiper-button-next swiper-button-next-project"><img class="d-none d-sm-flex" src="/assets/img/imgVar/right-arrow-blue.svg"><img class="d-flex d-sm-none" src="/assets/img/imgVar/smlright-arrow-blue.svg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const swiper1 = new Swiper('.swiper-project', {
+                    direction: 'horizontal',
+                    loop: true,
+                    spaceBetween: 20,
+
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            centeredSlides: true,
+                        },
+
+                        576: {
+                            slidesPerView: 2,
+                            centeredSlides: false,
+                        },
+
+                        992: {
+                            slidesPerView: 3,
+                        },
+                        1400: {
+                            slidesPerView: 3,
+                        },
+                    },
+
+                    navigation: {
+                        nextEl: '.swiper-button-next-project',
+                        prevEl: '.swiper-button-prev-project',
+                    },
+                })
+            })
+        </script>
+        <section class="centred-know-more">
+            <div class="container">
+                <div class="know-more-all">
+                    <picture>
+                        <source srcset="/assets/img/know-more/know-more-320.webp" media="(max-width: 576px)">
+                        <source srcset="/assets/img/know-more/know-more-576.webp" media="(max-width: 992px) and (min-width: 576px)">
+                        <source srcset="/assets/img/know-more/know-more-992.webp" media="(max-width: 1400px) and (min-width: 992px)">
+                        <source srcset="/assets/img/know-more/know-more-1400.webp" media="(min-width: 1400px)">
+                        <img src="/assets/img/know-more/know-more-1400.webp">
+                    </picture>
+                    <div class="know-more-all-block d-flex flex-column">
+                        <div class="know-more-all-block-text d-flex flex-column">
+                            <h2>Узнайте о нас больше</h2>
+                            <p>Отправьте запрос на нашу почту и мы предоставим необходимые материалы и ответим на ваши вопросы. Дополнительную информацию вы можете найти в наших социальных сетях</p>
+                        </div>
+                        <div class="know-more-all-block-btns">
+                            <a class="button-main button-img" href="mailto:mail@gashemeng.ru">E-mail <img src="/assets/img/imgVar/mail-wt.svg"></a>
+                            <a class="button-main button-white"><img src="/assets/img/imgVar/tg.svg">Telegram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="centred-partners">
+            <div class="partners-back position-relative">
+                <img class="partners-back-vecone d-none d-xxl-block" src="/assets/img/partners/vector1.webp">
+                <img class="partners-back-vecone d-none d-lg-block d-xxl-none" src="/assets/img/partners/vector1-1000.webp">
+            </div>
+            <div class="container">
+                <h2 class="partners-text">Клиенты и партнеры</h2>
+            </div>
+            <div class="partners-block">
+                <div class="meeting-marquee marquee-runline">
+                    <div>
+                        <div>
+                            <div class="meeting_item">
+                                <img src="/assets/img/partners/1.svg">
+                            </div>
+                            <div class="meeting_item">
+                                <img src="/assets/img/partners/2.svg">
+                            </div>
+                            <div class="meeting_item">
+                                <img src="/assets/img/partners/3.svg">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="meeting_item">
+                                <img src="/assets/img/partners/1.svg">
+                            </div>
+                            <div class="meeting_item">
+                                <img src="/assets/img/partners/2.svg">
+                            </div>
+                            <div class="meeting_item">
+                                <img src="/assets/img/partners/3.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="centred-contacts">
+            <div class="contacts-back position-relative">
+                <img class="contacts-back-vecone d-none d-xxl-block" src="/assets/img/contacts/vector1.webp">
+                <img class="contacts-back-vecone d-none d-lg-block d-xxl-none" src="/assets/img/contacts/vector1-1000.webp">
+                <img class="contacts-back-vectwo d-none d-xxl-block" src="/assets/img/contacts/vector2.webp">
+                <img class="contacts-back-vectwo d-none d-lg-block d-xxl-none" src="/assets/img/contacts/vector2-1000.webp">
+                <img class="contacts-back-vectwo d-none d-sm-block d-lg-none" src="/assets/img/contacts/vector2-576.webp">
+                <img class="contacts-back-vectwo d-block d-sm-none" src="/assets/img/contacts/vector2-320.webp">
+            </div>
+            <div class="container">
+                <div class="contacts-block">
+                    <div class="contacts-block-text d-flex flex-column">
+                        <h2>Свяжитесь с нами</h2>
+                        <div class="contacts-block-text-pins d-flex flex-column">
+                            <a class="contacts-block-text-pin d-flex flex-row align-items-center">
+                                <img src="/assets/img/contacts/map-pin.svg">
+                                <p>г. Уфа, улица Авроры, д2 - головной офис</p>
+                            </a>
+                            <a href="tel:+73472940246" class="contacts-block-text-pin d-flex flex-row align-items-center">
+                                <img src="/assets/img/contacts/phone.svg">
+                                <p>+7 (347) 294-02-46</p>
+                            </a>
+                            <a href="tel:+7499111101" class="contacts-block-text-pin d-flex flex-row align-items-center">
+                                <img src="/assets/img/contacts/phone.svg">
+                                <p>+7 (499) 911-11-01</p>
+                            </a>
+                            <a href="mailto:mail@gashemeng.ru" class="contacts-block-text-pin d-flex flex-row align-items-center">
+                                <img src="/assets/img/contacts/mail.svg">
+                                <p>mail@gashemeng.ru</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contacts-map">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac86465f998e97c5730b3de3f3ab3c3eeda990b973176c563bda8fd88fa0d63fb&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-all d-flex flex-column">
+                    <div class="footer-all-top d-flex justify-content-between">
+                        <div>
+                            <img src="/assets/img/footer/logofoot.svg">
+                        </div>
+                        <div class="footer-all-top-nav">
+                            <div class="footer-all-top-nav-menu">
+                                <div class="footer-all-top-nav-ul d-flex flex-column">
+                                    <h3><a>Наши направления</a></h3>
+                                    <ul class="d-flex flex-column">
+                                        <li><a href="#">Инжиниринг</a></li>
+                                        <li><a href="#">Технологии</a></li>
+                                        <li><a href="#">Исследования</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-all-top-nav-ul d-flex flex-column">
+                                    <h3><a>Компания</a></h3>
+                                    <ul class="d-flex flex-column">
+                                        <li><a href="#">О компании</a></li>
+                                        <li><a href="#">Проекты</a></li>
+                                        <li><a href="#">Презентации и документы</a></li>
+                                        <li><a href="#">Новости</a></li>
+                                        <li><a href="#">Карьера</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-all-top-nav-inf">
+                                <div class="footer-all-top-nav-number d-flex flex-column">
+                                    <h3>Тел.:</h3>
+                                    <a href="tel:+7 (347) 294-02-46">+7 (347) 294-02-46</a>
+                                </div>
+                                <div class="footer-all-top-nav-contacts">
+                                    <div class="d-flex flex-column">
+                                        <h3>Напишите нам:</h3>
+                                        <a href="mailto:mail@gashemeng.ru">mail@gashemeng.ru</a>
+                                        <a href="#">TG: @gaschemeng.ru</a>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h3>Свяжитесь с нами:</h3>
+                                        <a href="#">г. Уфа, ул. Авроры, д2</a>
+                                        <a href="#">г. Москва, ул. , д</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-all-bottom d-flex justify-content-between">
+                        <p>2017-2024 - 000 “Газохим Инжиниринг</p>
+                        <a href="#">Политика конфиденциальности</a>
+                        <a class="footer-all-bottom-ambity" href="https://ambity.ru/">Разработка сайта<span> - Амбити</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+</body>
+</html>

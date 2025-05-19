@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/style/style.css" rel="stylesheet" >
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container d-flex flex-row justify-content-between align-items-center">
+            <a class="logo">
+                <picture>
+                    <source srcset="/assets/img/header/smllogohead.svg" media="(max-width: 1400px)">
+                    <source srcset="/assets/img/header/logohead.svg" media="(min-width: 1400px)">
+                    <img src="/assets/img/header/logohead.svg">
+                </picture>
+            </a>
+            <nav class="d-flex flex-row align-items-center">
+                <div class="dropdown elemfirst d-none d-sm-none d-lg-block">
+                    <a href="#" class="d-flex flex-row">
+                        Наши направления
+                        <img src="/assets/img/imgVar/chevron-down-blue.svg">
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="item">
+                            <div class="d-flex flex-column">
+                                <a href="#">Инжиниринг</a>
+                                <ul>
+                                    <li><a href="#">Комплексный инжиниринг</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <a href="#">Технологии</a>
+                                <ul>
+                                    <li><a href="#">Водородные технологии</a></li>
+                                    <li><a href="#">Цифровые технологии</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <a href="#">Исследования</a>
+                                <ul>
+                                    <li><a href="#">Наноинженерия</a></li>
+                                    <li><a href="#">Нейротехнологии</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="d-none d-sm-none d-lg-flex d-xxl-none">Проекты</a>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Новости</a>
+                <a href="#" class="d-none d-sm-none d-lg-none d-xxl-flex">Презентации</a>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Карьера</a>
+                <div class="dropdown elemsecond d-none d-sm-none d-lg-none d-xxl-block">
+                    <a href="#">О компании</a>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">История компании</a></li>
+                            <li><a href="#">Экспериментальная база</a></li>
+                            <li><a href="#">Сертификаты</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Контакты</a>
+                <button class="burger d-lg-flex d-xxl-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                    <div class="offcanvas-header">
+                        <a data-bs-dismiss="offcanvas" aria-label="Закрыть"><img src="/assets/img/header/x.svg"></a>
+                    </div>
+                    <div class="offcanvas-body">
+                        <nav class="d-flex flex-column align-items-start">
+                            <div class="off-item d-flex flex-column">
+                                <a href="#">Наши направления <img class="d-none d-sm-block" src="/assets/img/imgVar/chevron-down-white.svg"> <img class="d-block d-sm-none" class="" src="/assets/img/imgVar/smlchevron-down-white.svg"></a>
+                                <ul>
+                                    <li><a href="#">Инжиниринг</a></li>
+                                    <li><a href="#">Технологии</a></li>
+                                    <li><a href="#">Исследования</a></li>
+                                </ul>
+                            </div>
+                            <a href="#">Проекты</a>
+                            <a href="#">Документы</a>
+                            <a href="#">Новости</a>
+                            <a href="#">Карьера</a>
+                            <div class="off-item d-flex flex-column">
+                                <a href="#">О компании <img class="d-none d-sm-block" src="/assets/img/imgVar/chevron-down-white.svg"> <img class="d-block d-sm-none" class="" src="/assets/img/imgVar/smlchevron-down-white.svg"></a>
+                                <ul>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">История компании</a></li>
+                                    <li><a href="#">Документы</a></li>
+                                </ul>
+                            </div>
+                            <a href="#">Контакты</a>
+                            <div class="off-contacts d-flex flex-column">
+                                <a class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/map-pin.svg"> <p>г. Уфа, улица Авроры, д2 - головной офис</p></a>
+                                <!--<div class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/map-pin.svg"><p>г. Москва, улица, д</p></div>-->
+                                <a href="tel:+73472940246" class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/phone.svg"><p>+7 (347) 294-02-46</p></a>
+                                <a href="tel:+74999111101" class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/phone.svg"><p>+7 (499) 911-11-01</p></a>
+                                <a href="mailto:mail@gashemeng.ru" class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/mail.svg"><p>mail@gashemeng.ru</p></a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <a href="#" class="tgwidget">
+        <div class="position-relative">
+            <img class="position-absolute d-none d-sm-block icon" src="/assets/img/imgVar/tgvector.svg">
+            <img class="position-absolute d-none d-sm-block back" src="/assets/img/imgVar/ellipse.svg">
+            <div class="position-absolute d-none d-sm-block textblock"><img class="text" src="/assets/img/imgVar/text.svg"></div>
+            <img class="position-absolute d-block d-sm-none icon" src="/assets/img/imgVar/smltgvector.svg">
+            <img class="position-absolute d-block d-sm-none back" src="/assets/img/imgVar/smlellipse.svg">
+            <div class="position-absolute d-block d-sm-none textblock"><img class="text" src="/assets/img/imgVar/smltext.svg"></div>
+        </div>
+    </a>
+    <main>
+        <section class="main-banner"> 
+            <div class="main-banner-back position-relative">
+                <picture>
+                    <source srcset="/assets/img/career/career-banner-320.webp" media="(max-width: 576px)">
+                    <source srcset="/assets/img/career/career-banner-576.webp" media="(max-width: 992px) and (min-width: 576px)">
+                    <source srcset="/assets/img/career/career-banner-1000.webp" media="(max-width: 1400px) and (min-width: 992px)">
+                    <source srcset="/assets/img/career/career-banner-1400.webp" media="(min-width: 1400px)">
+                    <img src="/assets/img/career/career-banner-1440.webp">
+                </picture>
+            </div>
+            <div class="container d-flex flex-row justify-content-center">
+                <div class="title-banner d-flex flex-column justify-content-center">
+                        <h1>Начните свою карьеру в Газохим Инжиниринг!</h1>
+                    <div class="justify-content-start">
+                        <p>Присоединяйтесь к нашей команде профессионалов, где ваши идеи и амбиции найдут поддержку</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="centred-work">
+            <div class="container">
+                <div class="work-all">
+                    <div class="work-header">
+                        <h2>Предлагаем </br><span>выгодные условия работы</span></h2>
+                    </div>
+                    <div class="work-blocks">
+                        <div class="work-block">
+                            <div class="work-block-text">
+                                <h3>Официальное трудоустройство</h3>
+                                <p>Мы предлагаем трудоустройство  в соответствии с ТК РФ, график 5/2. Всегда готовы обсудить режим работы</p>
+                            </div>
+                            <img src="/assets/img/career/thumbs-up.svg">
+                        </div>
+                        <div class="work-block work-block-blue">
+                            <div class="work-block-text">
+                                <h3 class="blue">Заработная плата</h3>
+                                <p class="blue">Конкурентная белая заработная плата 2 раза в месяц</p>
+                            </div>
+                            <img src="/assets/img/career/coins.svg">
+                        </div>
+                        <div class="work-block">
+                            <div class="work-block-text">
+                                <h3>Интересные проекты</h3>
+                                <p>Вас ждут сложные и интересные задачи в проектах в области высоких технологий, проектах по зеленой/голубой энергетике</p>
+                            </div>
+                            <img src="/assets/img/career/technology.svg">
+                        </div>
+                        <div class="work-block">
+                            <div class="work-block-text">
+                                <h3>Уважаем Ваше время</h3>
+                                <p>Отсутствие строгого режима труда, гибкое начало-окончание рабочего дня, возможность совмещать работу с учебой</p>
+                            </div>
+                            <img src="/assets/img/career/clock.svg">
+                        </div>
+                        <div class="work-block">
+                            <div class="work-block-text">
+                                <h3>Непрерывное обучение</h3>
+                                <p>Наша команда очень много учится и совершенствуется. Мы предоставляем обширные возможности для обучения и повышения квалификаций</p>
+                            </div>
+                            <img src="/assets/img/career/engineering.svg">
+                        </div>
+                        <div class="work-block work-block-blue">
+                            <div class="work-block-text">
+                                <h3 class="blue">Рабочее место</h3>
+                                <p class="blue">Современный комфортный офис с оборудованной зоной питания и кофемашиной; компания входит в реестр аккредитованных IT-компаний</p>
+                            </div>
+                            <img src="/assets/img/career/handshake.svg">
+                        </div>
+                    </div>
+                </div>               
+            </div>
+        </section>
+        <!-- <section class="centred-vacantion">
+            <div class="container">
+                <div class="vacantion-all">
+                    <div class="vacantion-header">
+                        <h2>Актуальные вакансии</h2>
+                    </div>
+                    <div class="vacantion-block">
+                        <div class="accordion accordion-flush" id="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#1" aria-expanded="false" aria-controls="1">
+                                    Ведущий проектировщик технологических разделов проектной документации (нефтегазохимия, спецхимия) 
+                                </button>
+                                </h2>
+                                <div id="1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <div class="accordion-body-block">
+                                        <p>Требования:</p>
+                                        <ul>
+                                            <li>Опыт работы от 3 лет;</li>
+                                            <li>Уверенный пользователь AutoCAD либо других программ проектирования;</li>
+                                            <li>Знание нормативной документации по проектированию, строительству и эксплуатации объектов;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Исполнительность, пунктуальность, ориентация на результат, ответственность за достижение результата;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Навыки и понимание принципов календарно-сетевого планирования.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordion-body-block">
+                                        <p>Обязанности:</p>
+                                        <ul>
+                                            <li>Разрабатывает раздел проекта «Технологические решения»;</li>
+                                            <li>Принимает участие в подготовке заданий на разработку проектных решений;</li>
+                                            <li>Участвует в сборе исходных данных для проектирования, в решении технических вопросов по закрепленным объектам на протяжении всего периода проектирования;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Обеспечивает соответствие разрабатываемых проектов и технической документации стандартам, техническим условиям и другим нормативным документам;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Участвует в анализе и обобщении опыта разработки проектов и их реализации в строительстве.</li>
+                                        </ul>
+                                        <button class="button-main">Откликнуться</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#2" aria-expanded="false" aria-controls="2">
+                                    Инженер-проектировщик/ Технолог (химия/нефтехимия)
+                                </button>
+                                </h2>
+                                <div id="2" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <div class="accordion-body-block">
+                                        <p>Требования:</p>
+                                        <ul>
+                                            <li>Опыт работы от 3 лет;</li>
+                                            <li>Уверенный пользователь AutoCAD либо других программ проектирования;</li>
+                                            <li>Знание нормативной документации по проектированию, строительству и эксплуатации объектов;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Исполнительность, пунктуальность, ориентация на результат, ответственность за достижение результата;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Навыки и понимание принципов календарно-сетевого планирования.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordion-body-block">
+                                        <p>Обязанности:</p>
+                                        <ul>
+                                            <li>Разрабатывает раздел проекта «Технологические решения»;</li>
+                                            <li>Принимает участие в подготовке заданий на разработку проектных решений;</li>
+                                            <li>Участвует в сборе исходных данных для проектирования, в решении технических вопросов по закрепленным объектам на протяжении всего периода проектирования;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Обеспечивает соответствие разрабатываемых проектов и технической документации стандартам, техническим условиям и другим нормативным документам;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Участвует в анализе и обобщении опыта разработки проектов и их реализации в строительстве.</li>
+                                        </ul>
+                                        <button class="button-main">Откликнуться</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#3" aria-expanded="false" aria-controls="3">
+                                    Инженер-проектировщик/ Технолог (химия/нефтехимия)
+                                </button>
+                                </h2>
+                                <div id="3" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <div class="accordion-body-block">
+                                        <p>Требования:</p>
+                                        <ul>
+                                            <li>Опыт работы от 3 лет;</li>
+                                            <li>Уверенный пользователь AutoCAD либо других программ проектирования;</li>
+                                            <li>Знание нормативной документации по проектированию, строительству и эксплуатации объектов;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Исполнительность, пунктуальность, ориентация на результат, ответственность за достижение результата;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Навыки и понимание принципов календарно-сетевого планирования.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordion-body-block">
+                                        <p>Обязанности:</p>
+                                        <ul>
+                                            <li>Разрабатывает раздел проекта «Технологические решения»;</li>
+                                            <li>Принимает участие в подготовке заданий на разработку проектных решений;</li>
+                                            <li>Участвует в сборе исходных данных для проектирования, в решении технических вопросов по закрепленным объектам на протяжении всего периода проектирования;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Обеспечивает соответствие разрабатываемых проектов и технической документации стандартам, техническим условиям и другим нормативным документам;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Участвует в анализе и обобщении опыта разработки проектов и их реализации в строительстве.</li>
+                                        </ul>
+                                        <button class="button-main">Откликнуться</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#4" aria-expanded="false" aria-controls="4">
+                                    Инженер-проектировщик/ Технолог (химия/нефтехимия)
+                                </button>
+                                </h2>
+                                <div id="4" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <div class="accordion-body-block">
+                                        <p>Требования:</p>
+                                        <ul>
+                                            <li>Опыт работы от 3 лет;</li>
+                                            <li>Уверенный пользователь AutoCAD либо других программ проектирования;</li>
+                                            <li>Знание нормативной документации по проектированию, строительству и эксплуатации объектов;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Исполнительность, пунктуальность, ориентация на результат, ответственность за достижение результата;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Навыки и понимание принципов календарно-сетевого планирования.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordion-body-block">
+                                        <p>Обязанности:</p>
+                                        <ul>
+                                            <li>Разрабатывает раздел проекта «Технологические решения»;</li>
+                                            <li>Принимает участие в подготовке заданий на разработку проектных решений;</li>
+                                            <li>Участвует в сборе исходных данных для проектирования, в решении технических вопросов по закрепленным объектам на протяжении всего периода проектирования;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Обеспечивает соответствие разрабатываемых проектов и технической документации стандартам, техническим условиям и другим нормативным документам;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Участвует в анализе и обобщении опыта разработки проектов и их реализации в строительстве.</li>
+                                        </ul>
+                                        <button class="button-main">Откликнуться</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#5" aria-expanded="false" aria-controls="5">
+                                    Инженер-проектировщик/ Технолог (химия/нефтехимия)
+                                </button>
+                                </h2>
+                                <div id="5" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <div class="accordion-body-block">
+                                        <p>Требования:</p>
+                                        <ul>
+                                            <li>Опыт работы от 3 лет;</li>
+                                            <li>Уверенный пользователь AutoCAD либо других программ проектирования;</li>
+                                            <li>Знание нормативной документации по проектированию, строительству и эксплуатации объектов;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Исполнительность, пунктуальность, ориентация на результат, ответственность за достижение результата;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Навыки и понимание принципов календарно-сетевого планирования.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordion-body-block">
+                                        <p>Обязанности:</p>
+                                        <ul>
+                                            <li>Разрабатывает раздел проекта «Технологические решения»;</li>
+                                            <li>Принимает участие в подготовке заданий на разработку проектных решений;</li>
+                                            <li>Участвует в сборе исходных данных для проектирования, в решении технических вопросов по закрепленным объектам на протяжении всего периода проектирования;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Обеспечивает соответствие разрабатываемых проектов и технической документации стандартам, техническим условиям и другим нормативным документам;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Участвует в анализе и обобщении опыта разработки проектов и их реализации в строительстве.</li>
+                                        </ul>
+                                        <button class="button-main">Откликнуться</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#6" aria-expanded="false" aria-controls="6">
+                                    Инженер-проектировщик/ Технолог (химия/нефтехимия)
+                                </button>
+                                </h2>
+                                <div id="6" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <div class="accordion-body-block">
+                                        <p>Требования:</p>
+                                        <ul>
+                                            <li>Опыт работы от 3 лет;</li>
+                                            <li>Уверенный пользователь AutoCAD либо других программ проектирования;</li>
+                                            <li>Знание нормативной документации по проектированию, строительству и эксплуатации объектов;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Исполнительность, пунктуальность, ориентация на результат, ответственность за достижение результата;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Навыки и понимание принципов календарно-сетевого планирования.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordion-body-block">
+                                        <p>Обязанности:</p>
+                                        <ul>
+                                            <li>Разрабатывает раздел проекта «Технологические решения»;</li>
+                                            <li>Принимает участие в подготовке заданий на разработку проектных решений;</li>
+                                            <li>Участвует в сборе исходных данных для проектирования, в решении технических вопросов по закрепленным объектам на протяжении всего периода проектирования;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Обеспечивает соответствие разрабатываемых проектов и технической документации стандартам, техническим условиям и другим нормативным документам;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Участвует в анализе и обобщении опыта разработки проектов и их реализации в строительстве.</li>
+                                        </ul>
+                                        <button class="button-main">Откликнуться</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#7" aria-expanded="false" aria-controls="7">
+                                    Инженер-проектировщик/ Технолог (химия/нефтехимия)
+                                </button>
+                                </h2>
+                                <div id="7" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <div class="accordion-body-block">
+                                        <p>Требования:</p>
+                                        <ul>
+                                            <li>Опыт работы от 3 лет;</li>
+                                            <li>Уверенный пользователь AutoCAD либо других программ проектирования;</li>
+                                            <li>Знание нормативной документации по проектированию, строительству и эксплуатации объектов;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Исполнительность, пунктуальность, ориентация на результат, ответственность за достижение результата;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Навыки и понимание принципов календарно-сетевого планирования.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordion-body-block">
+                                        <p>Обязанности:</p>
+                                        <ul>
+                                            <li>Разрабатывает раздел проекта «Технологические решения»;</li>
+                                            <li>Принимает участие в подготовке заданий на разработку проектных решений;</li>
+                                            <li>Участвует в сборе исходных данных для проектирования, в решении технических вопросов по закрепленным объектам на протяжении всего периода проектирования;</li>
+                                            <li>Увязывает принимаемые проектные решения с проектными решениями по другим разделам (частям) проекта;</li>
+                                            <li>Обеспечивает соответствие разрабатываемых проектов и технической документации стандартам, техническим условиям и другим нормативным документам;</li>
+                                            <li>Осуществляет авторский надзор за строительством проектируемых объектов, консультирует по вопросам, входящим в его компетенцию;</li>
+                                            <li>Участвует в анализе и обобщении опыта разработки проектов и их реализации в строительстве.</li>
+                                        </ul>
+                                        <button class="button-main">Откликнуться</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vacantion-button">
+                        <button class="button-main button-white-border" id="showMoreBtn">Загрузиться еще вакансии</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                let currentIndex = 0;
+                const blocks = document.querySelectorAll('.accordion-item');
+                const showMoreBtn = document.getElementById('showMoreBtn');
+                const showMoreBlock = document.querySelector('.vacantion-button');
+
+                function showMoreBlocks() {
+                    let countToShow = 2;
+                    let shownCount = 0;
+
+                    for (let i = currentIndex; i < blocks.length && shownCount < countToShow; i++, shownCount++) {
+                        blocks[i].style.display = 'block';
+                    }
+
+                    currentIndex += shownCount;
+
+                    if (currentIndex >= blocks.length) {
+                        showMoreBlock.style.display = 'none';
+                    }
+                }
+
+                showMoreBtn.addEventListener('click', showMoreBlocks);
+                showMoreBlocks(); // Показать первые 2 блока сразу 
+            })
+        </script> -->
+        <section class="centred-know-more">
+            <div class="container">
+                <div class="know-more-all">
+                    <picture>
+                        <source srcset="/assets/img/career/quest-320.webp" media="(max-width: 576px)">
+                        <source srcset="/assets/img/career/quest-576.webp" media="(max-width: 992px) and (min-width: 576px)">
+                        <source srcset="/assets/img/career/quest-992.webp" media="(max-width: 1400px) and (min-width: 992px)">
+                        <source srcset="/assets/img/career/quest-1400.webp" media="(min-width: 1400px)">
+                        <img src="/assets/img/career/quest-1400.webp" style="object-position: right;">
+                    </picture>
+                    <div class="know-more-all-block d-flex flex-column">
+                        <div class="know-more-all-block-text d-flex flex-column">
+                            <h2>СТРОИМ БУДУЩЕЕ ВМЕСТЕ</h2>
+                            <p>Мы заинтересованы в привлечении талантливых профессионалов, готовых решать сложные задачи и развиваться вместе с компанией. Если вы обладаете глубокими знаниями в своей области, имеете успешный опыт реализации проектов и стремитесь к профессиональному росту — мы хотим видеть вас в нашей команде.</p>
+                        </div>
+                        <div class="know-more-all-block-btns">
+                            <button class="button-main button-img" type="button" data-bs-toggle="modal" data-bs-target="#modal">Отправить резюме</button>
+                            <a href="mailto:hr@gaschemeng.ru" class="button-main button-white">hr@gaschemeng.ru</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-all d-flex flex-column">
+                    <div class="footer-all-top d-flex justify-content-between">
+                        <div>
+                            <img src="/assets/img/footer/logofoot.svg">
+                        </div>
+                        <div class="footer-all-top-nav">
+                            <div class="footer-all-top-nav-menu">
+                                <div class="footer-all-top-nav-ul d-flex flex-column">
+                                    <h3><a>Наши направления</a></h3>
+                                    <ul class="d-flex flex-column">
+                                        <li><a href="#">Инжиниринг</a></li>
+                                        <li><a href="#">Технологии</a></li>
+                                        <li><a href="#">Исследования</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-all-top-nav-ul d-flex flex-column">
+                                    <h3><a>Компания</a></h3>
+                                    <ul class="d-flex flex-column">
+                                        <li><a href="#">О компании</a></li>
+                                        <li><a href="#">Проекты</a></li>
+                                        <li><a href="#">Презентации и документы</a></li>
+                                        <li><a href="#">Новости</a></li>
+                                        <li><a href="#">Карьера</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-all-top-nav-inf">
+                                <div class="footer-all-top-nav-number d-flex flex-column">
+                                    <h3>Тел.:</h3>
+                                    <a href="tel:+7 (347) 294-02-46">+7 (347) 294-02-46</a>
+                                </div>
+                                <div class="footer-all-top-nav-contacts">
+                                    <div class="d-flex flex-column">
+                                        <h3>Напишите нам:</h3>
+                                        <a href="mailto:mail@gashemeng.ru">mail@gashemeng.ru</a>
+                                        <a href="#">TG: @gaschemeng.ru</a>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h3>Свяжитесь с нами:</h3>
+                                        <a href="#">г. Уфа, ул. Авроры, д2</a>
+                                        <a href="#">г. Москва, ул. , д</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-all-bottom d-flex justify-content-between">
+                        <p>2017-2024 - 000 “Газохим Инжиниринг</p>
+                        <a href="#">Политика конфиденциальности</a>
+                        <a class="footer-all-bottom-ambity" href="https://ambity.ru/">Разработка сайта<span> - Амбити</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal" id="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-header d-flex flex-column">
+                    <h2>Откликнуться</h2>
+                    <span>Заполните информацию о себе</span>
+                </div>
+                <form>
+                    <div class="form-part">
+                        <label>Выберите город*</label>
+                        <select>
+                            <option value="" selected hidden disabled>Ваш город</option>
+                            <option value="petersburg">Санкт-Петербург</option>
+                            <option value="moscow">Москва</option>
+                            <option value="kazan">Казань</option>
+                            <option value="ufa">Уфа</option>
+                        </select>
+                    </div>
+                    <div class="form-part">
+                        <label>Выберите вакансию из списка*</label>
+                        <select>
+                            <option value="" selected hidden disabled >Вакансии</option>
+                            <option value="leadEngineer">Ведущий инженер</option>
+                            <option value="engineer">Инженер</option>
+                        </select>
+                    </div>
+                    <div class="form-part">
+                        <label for="nameSurname">Как к Вам обращаться*</label>
+                        <input type="text" name="nameSurname" id="nameSurname" placeholder="Фамилия и имя">
+                    </div>
+                    <div class="form-part d-flex flex-row">
+                        <div class="form-part">
+                            <label for="number">Телефон*</label>
+                            <input type="number" name="number" id="number" placeholder="Номер телефона">
+                        </div>
+                        <div class="form-part">
+                            <label>Ваша почта*</label>
+                            <input type="email" name="email" id="email" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="form-part">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" accept=".PDF, .DOCX, .DOC" required>
+                            <label class="custom-file-label" for="customFile">Выберите файл</label>
+                        </div>
+                        <p class="form-part-file">Прикрепите файл в формате PDF, DOCX, DOC</p>
+                    </div>
+                    <div class="modal-btn">
+                        <button class="button-main" type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Настройка метки для отображения имени файла
+    document.querySelector('.custom-file-input').addEventListener('change', function (event) {
+        const fileName = event.target.files[0] ? event.target.files[0].name : '';
+        const label = event.target.nextElementSibling;
+        label.innerHTML = fileName;
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+</body>
+</html>
