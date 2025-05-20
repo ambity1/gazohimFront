@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="/assets/style/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="container d-flex flex-row justify-content-between align-items-center">
+            <a class="logo">
+                <picture>
+                    <source srcset="/assets/img/header/smllogohead.svg" media="(max-width: 1400px)">
+                    <source srcset="/assets/img/header/logohead.svg" media="(min-width: 1400px)">
+                    <img src="/assets/img/header/logohead.svg">
+                </picture>
+            </a>
+            <nav class="d-flex flex-row align-items-center">
+                <div class="dropdown elemfirst d-none d-sm-none d-lg-block">
+                    <a href="#" class="d-flex flex-row">
+                        Наши направления
+                        <img src="/assets/img/imgVar/chevron-down-blue.svg">
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="item">
+                            <div class="d-flex flex-column">
+                                <a href="#">Инжиниринг</a>
+                                <ul>
+                                    <li><a href="#">Комплексный инжиниринг</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <a href="#">Технологии</a>
+                                <ul>
+                                    <li><a href="#">Водородные технологии</a></li>
+                                    <li><a href="#">Цифровые технологии</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <a href="#">Исследования</a>
+                                <ul>
+                                    <li><a href="#">Наноинженерия</a></li>
+                                    <li><a href="#">Нейротехнологии</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="d-none d-sm-none d-lg-flex d-xxl-none">Проекты</a>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Новости</a>
+                <a href="#" class="d-none d-sm-none d-lg-none d-xxl-flex">Презентации</a>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Карьера</a>
+                <div class="dropdown elemsecond d-none d-sm-none d-lg-none d-xxl-block">
+                    <a href="#">О компании</a>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">История компании</a></li>
+                            <li><a href="#">Экспериментальная база</a></li>
+                            <li><a href="#">Сертификаты</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Контакты</a>
+                <button class="burger d-lg-flex d-xxl-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                    aria-controls="offcanvas">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                    <div class="offcanvas-header">
+                        <a data-bs-dismiss="offcanvas" aria-label="Закрыть"><img src="/assets/img/header/x.svg"></a>
+                    </div>
+                    <div class="offcanvas-body">
+                        <nav class="d-flex flex-column align-items-start">
+                            <div class="off-item d-flex flex-column">
+                                <a href="#">Наши направления <img class="d-none d-sm-block"
+                                        src="/assets/img/imgVar/chevron-down-white.svg"> <img class="d-block d-sm-none"
+                                        class="" src="/assets/img/imgVar/smlchevron-down-white.svg"></a>
+                                <ul>
+                                    <li><a href="#">Инжиниринг</a></li>
+                                    <li><a href="#">Технологии</a></li>
+                                    <li><a href="#">Исследования</a></li>
+                                </ul>
+                            </div>
+                            <a href="#">Проекты</a>
+                            <a href="#">Документы</a>
+                            <a href="#">Новости</a>
+                            <a href="#">Карьера</a>
+                            <div class="off-item d-flex flex-column">
+                                <a href="#">О компании <img class="d-none d-sm-block"
+                                        src="/assets/img/imgVar/chevron-down-white.svg"> <img class="d-block d-sm-none"
+                                        class="" src="/assets/img/imgVar/smlchevron-down-white.svg"></a>
+                                <ul>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">История компании</a></li>
+                                    <li><a href="#">Документы</a></li>
+                                </ul>
+                            </div>
+                            <a href="#">Контакты</a>
+                            <div class="off-contacts d-flex flex-column">
+                                <a class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/map-pin.svg">
+                                    <p>г. Уфа, улица Авроры,<br> д2 - головной офис</p>
+                                </a>
+                                <!--<div class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/map-pin.svg"><p>г. Москва, улица, д</p></div>-->
+                                <a href="tel:+73472940246" class="d-flex flex-row align-items-center"><img
+                                        src="/assets/img/imgVar/phone.svg">
+                                    <p>+7 (347) 294-02-46</p>
+                                </a>
+                                <a href="tel:+74999111101" class="d-flex flex-row align-items-center"><img
+                                        src="/assets/img/imgVar/phone.svg">
+                                    <p>+7 (499) 911-11-01</p>
+                                </a>
+                                <a href="mailto:mail@gashemeng.ru" class="d-flex flex-row align-items-center"><img
+                                        src="/assets/img/imgVar/mail.svg">
+                                    <p>mail@gashemeng.ru</p>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <a href="#" class="tgwidget">
+        <div class="position-relative">
+            <img class="position-absolute d-none d-sm-block icon" src="/assets/img/imgVar/tgvector.svg">
+            <img class="position-absolute d-none d-sm-block back" src="/assets/img/imgVar/ellipse.svg">
+            <div class="position-absolute d-none d-sm-block textblock"><img class="text"
+                    src="/assets/img/imgVar/text.svg"></div>
+            <img class="position-absolute d-block d-sm-none icon" src="/assets/img/imgVar/smltgvector.svg">
+            <img class="position-absolute d-block d-sm-none back" src="/assets/img/imgVar/smlellipse.svg">
+            <div class="position-absolute d-block d-sm-none textblock"><img class="text"
+                    src="/assets/img/imgVar/smltext.svg"></div>
+        </div>
+    </a>
+    <main>
+        <section class="direction">
+            <div class="direction-banner-back position-relative">
+                <img class="direction-banner-back-vecone d-none d-xxl-block" src="/assets/img/engineering/vector1.webp">
+                <img class="direction-banner-back-vecone d-none d-lg-block d-xxl-none"
+                    src="/assets/img/engineering/vector1-1000.webp">
+                <img class="direction-banner-back-vecone d-none d-sm-block d-lg-none"
+                    src="/assets/img/engineering/vector1-576.webp">
+                <img class="direction-banner-back-vecone d-block d-sm-none"
+                    src="/assets/img/engineering/vector1-320.webp">
+
+                <img class="direction-banner-back-vectwo d-none d-xxl-block" src="/assets/img/engineering/vector2.webp">
+                <img class="direction-banner-back-vectwo d-none d-lg-block d-xxl-none"
+                    src="/assets/img/engineering/vector2-1000.webp">
+                <img class="direction-banner-back-vectwo d-none d-sm-block d-lg-none"
+                    src="/assets/img/engineering/vector2-576.webp">
+                <img class="direction-banner-back-vectwo d-block d-sm-none"
+                    src="/assets/img/engineering/vector2-320.webp">
+            </div>
+            <div class="direction-banner container">
+                <div class="direction-banner-wrapper">
+                    <div class="direction-banner-content-wrapper">
+                        <img class="direction-banner-img" src="/assets/img/hydrogen-technologies/img1.webp">
+                        <div class="direction-banner-content">
+                            <h1 class="direction-banner-title">Водородные технологии </h1>
+                            <p class="direction-banner-text">Компания ООО “Газохим Инжиниринг” одной из первых на рынке
+                                РФ начала осознанное развитие направления энергоперехода. Сегодня мы готовы предложить
+                                зрелые решения “под ключ” в направлении водорода, водородной энергетики и CCUS для
+                                декарбонизации наших ключевых клиентов</p>
+                        </div>
+                    </div>
+                    <div class="direction-banner-indicators">
+                        <div class="direction-banner-indicator-item">
+                            <div class="direction-banner-indicator">
+                                <img class="direction-banner-indicator-img" src="/assets/img/direction/indicator.svg">
+                                <p class="direction-banner-indicator-value">99.99%</p>
+                            </div>
+                            <p class="direction-banner-indicator-text">
+                                стандартная чистота водорода
+                            </p>
+                        </div>
+                        <div class="direction-banner-indicator-item">
+                            <div class="direction-banner-indicator">
+                                <img class="direction-banner-indicator-img" src="/assets/img/direction/indicator.svg">
+                                <p class="direction-banner-indicator-value small-text">1 нм³/ч</br> до 3000 нм³/ч</p>
+                            </div>
+                            <p class="direction-banner-indicator-text">
+                                производительность водородных установок
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="technologies">
+            <div class="container">
+                <div class="technologies-wrapper">
+                    <div class="technologies-content">
+                        <h3 class="header-section">Водородная энергетика</h3>
+                        <div>
+                            <p>Сегодня мы готовы предложить зрелые решения "под ключ" в направлении водорода, водородной
+                                энергетики и CCUS для декарбонизации наших ключевых клиентов.</p>
+                            <p>Сотрудничество с лидирующими производителями водородного оборудования позволяет нам
+                                поставлять на рынок устойчивые, надежные решения по оптимальной цене</p>
+                        </div>
+                        <button class="button-main" type="submit">Направить запрос</button>
+                    </div>
+                    <div class="technologies-blocks">
+                        <div class="technologies-block">
+                            <p class="technologies-block-title">Электрохимические генераторы</p>
+                            <picture>
+                                <source srcset="/assets/img/hydrogen-technologies/blocks/1-320.webp" media="(max-width: 576px)">
+                                <source srcset="/assets/img/hydrogen-technologies/blocks/1.webp" media="(min-width: 576px)">
+                                <img class="technologies-block-img" src="/assets/img/hydrogen-technologies/blocks/1.webp">
+                            </picture>
+                        </div>
+                        <div class="technologies-block">
+                            <p class="technologies-block-title">Водородные заправочные станции</p>
+                            <picture>
+                                <source srcset="/assets/img/hydrogen-technologies/blocks/2-320.webp" media="(max-width: 576px)">
+                                <source srcset="/assets/img/hydrogen-technologies/blocks/2.webp" media="(min-width: 576px)">
+                                <img class="technologies-block-img" src="/assets/img/hydrogen-technologies/blocks/2.webp">
+                            </picture>
+                            <!-- <img class="technologies-block-img" src="/assets/img/hydrogen-technologies/blocks/2.webp"> -->
+                        </div>
+                        <div class="technologies-block">
+                            <p class="technologies-block-title">Улавливание, использование и хранение углерода</p>
+
+                            <picture>
+                                <source srcset="/assets/img/hydrogen-technologies/blocks/3-320.webp" media="(max-width: 576px)">
+                                <source srcset="/assets/img/hydrogen-technologies/blocks/3.webp" media="(min-width: 576px)">
+                                <img class="technologies-block-img" src="/assets/img/hydrogen-technologies/blocks/3.webp">
+                            </picture>
+                        </div>
+                        <div class="technologies-block">
+                            <p class="technologies-block-title">Генераторы водорода</p>
+
+                            <picture>
+                                <source srcset="/assets/img/hydrogen-technologies/blocks/4-320.webp" media="(max-width: 576px)">
+                                <source srcset="/assets/img/hydrogen-technologies/blocks/4.webp" media="(min-width: 576px)">
+                                <img class="technologies-block-img" src="/assets/img/hydrogen-technologies/blocks/4.webp">
+                            </picture>
+                        </div>
+                        <div class="technologies-block">
+                            <p class="technologies-block-title">Разработка и внедрение технологий для тяжелого транспорта</p>
+
+                            <picture>
+                                <source srcset="/assets/img/hydrogen-technologies/blocks/5-320.webp" media="(max-width: 576px)">
+                                <source srcset="/assets/img/hydrogen-technologies/blocks/5.webp" media="(min-width: 576px)">
+                                <img class="technologies-block-img" src="/assets/img/hydrogen-technologies/blocks/5.webp">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="centred-know-more">
+            <div class="container">
+                <div class="know-more-all">
+                    <picture>
+                        <source srcset="/assets/img/about-company/discuss-project-320.webp" media="(max-width: 576px)">
+                        <source srcset="/assets/img/about-company/discuss-project-576.webp"
+                            media="(max-width: 992px) and (min-width: 576px)">
+                        <source srcset="/assets/img/about-company/discuss-project-1000.webp"
+                            media="(max-width: 1400px) and (min-width: 992px)">
+                        <source srcset="/assets/img/about-company/discuss-project-1400.webp"
+                            media="(min-width: 1400px)">
+                        <img src="/assets/img/about-company/discuss-project-1400.webp">
+                    </picture>
+                    <div class="know-more-all-block d-flex flex-column align-items-start">
+                        <div class="know-more-all-block-text d-flex flex-column">
+                            <h2><span>Обсудим Ваш проект</span></h2>
+                            <p>Если Вы не нашли ответ на свой вопрос или подходящую вакансию, то напишите нам на
+                                почту и мы с Вами свяжемся!</p>
+                        </div>
+                        <div class="know-more-all-block-btns">
+                            <button class="button-main button-img" type="button" data-bs-toggle="modal"
+                                data-bs-target="#modal">Оставить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-all d-flex flex-column">
+                    <div class="footer-all-top d-flex justify-content-between">
+                        <div>
+                            <img src="/assets/img/footer/logofoot.svg">
+                        </div>
+                        <div class="footer-all-top-nav">
+                            <div class="footer-all-top-nav-menu">
+                                <div class="footer-all-top-nav-ul d-flex flex-column">
+                                    <h3><a>Наши направления</a></h3>
+                                    <ul class="d-flex flex-column">
+                                        <li><a href="#">Инжиниринг</a></li>
+                                        <li><a href="#">Технологии</a></li>
+                                        <li><a href="#">Исследования</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-all-top-nav-ul d-flex flex-column">
+                                    <h3><a>Компания</a></h3>
+                                    <ul class="d-flex flex-column">
+                                        <li><a href="#">О компании</a></li>
+                                        <li><a href="#">Проекты</a></li>
+                                        <li><a href="#">Презентации и документы</a></li>
+                                        <li><a href="#">Новости</a></li>
+                                        <li><a href="#">Карьера</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-all-top-nav-inf">
+                                <div class="footer-all-top-nav-number d-flex flex-column">
+                                    <h3>Тел.:</h3>
+                                    <a href="tel:+7 (347) 294-02-46">+7 (347) 294-02-46</a>
+                                </div>
+                                <div class="footer-all-top-nav-contacts">
+                                    <div class="d-flex flex-column">
+                                        <h3>Напишите нам:</h3>
+                                        <a href="mailto:mail@gashemeng.ru">mail@gashemeng.ru</a>
+                                        <a href="#">TG: @gaschemeng.ru</a>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h3>Свяжитесь с нами:</h3>
+                                        <a href="#">г. Уфа, ул. Авроры, д2</a>
+                                        <a href="#">г. Москва, ул. , д</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-all-bottom d-flex justify-content-between">
+                        <p>2017-2024 - 000 “Газохим Инжиниринг</p>
+                        <a href="#">Политика конфиденциальности</a>
+                        <a class="footer-all-bottom-ambity" href="https://ambity.ru/">Разработка сайта<span> -
+                                Амбити</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+</body>
+
+</html>
