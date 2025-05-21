@@ -5990,6 +5990,20 @@ iframe {
 }
 
 .technologies {
+    padding: 75px 0;
+
+    @media (max-width: 1400px) {
+        padding: 75px 0px;
+    }
+
+    @media (max-width: 992px) {
+        padding: 50px 0;
+    }
+
+    @media (max-width: 576px) {
+        padding: 30px 0;
+    }
+
     &-wrapper {
         display: flex;
         flex-direction: row;
@@ -6051,15 +6065,25 @@ iframe {
         grid-column: span 2;
     }
 
-    &-blocks &-block:nth-child(2),
-    &-blocks &-block:nth-child(3),
-    &-blocks &-block:nth-child(5) {
+    // &-blocks &-block:nth-child(2),
+    // &-blocks &-block:nth-child(3),
+    // &-blocks &-block:nth-child(5) {
+    //     background: linear-gradient(103.13deg, #005A87 0%, #8FB2FF 101.6%);
+
+    //     .technologies-block-title {
+    //         color: $white;
+    //     }
+    // }
+
+    &-block.blue {
         background: linear-gradient(103.13deg, #005A87 0%, #8FB2FF 101.6%);
 
         .technologies-block-title {
             color: $white;
         }
     }
+
+
 
     &-blocks &-block:nth-child(5) {
         flex-direction: row;
@@ -6186,23 +6210,23 @@ iframe {
             justify-content: space-between;
             align-items: center;
 
-            h3 {
-                font-family: 'Onest';
-                font-weight: 500;
-                font-size: 36px;
-                line-height: 120%;
-                @include text-gradient;
+            // h3 {
+            //     font-family: 'Onest';
+            //     font-weight: 500;
+            //     font-size: 36px;
+            //     line-height: 120%;
+            //     @include text-gradient;
 
-                @media (max-width: 1400px) {
-                    font-size: 30px;
-                }
+            //     @media (max-width: 1400px) {
+            //         font-size: 30px;
+            //     }
 
-                @media (max-width: 992px) {}
+            //     @media (max-width: 992px) {}
 
-                @media (max-width: 576px) {
-                    font-size: 24px;
-                }
-            }
+            //     @media (max-width: 576px) {
+            //         font-size: 24px;
+            //     }
+            // }
 
             &-btns {
                 display: flex;
@@ -6239,7 +6263,11 @@ iframe {
         &:hover {
             background-color: transparent;
             cursor: pointer;
-            box-shadow: unset
+            box-shadow: unset;
+
+            .offers-block-title {
+                color: $black;
+            }
         }
 
         @media (max-width: 1400px) {}
@@ -6337,4 +6365,207 @@ iframe {
         }
     }
 
+}
+
+.petrochemical {
+    padding: 75px 0;
+
+    @media (max-width: 1400px) {
+        padding: 75px 0px;
+    }
+
+    @media (max-width: 992px) {
+        padding: 50px 0;
+    }
+
+    @media (max-width: 576px) {
+        padding: 30px 0;
+    }
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media (max-width: 1400px) {}
+
+        @media (max-width: 992px) {
+            gap: 24px;
+        }
+
+        @media (max-width: 576px) {
+            gap: 25px;
+        }
+    }
+
+    &-content {
+        max-width: 985px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @media (max-width: 1400px) {}
+
+        @media (max-width: 992px) {}
+
+        @media (max-width: 576px) {
+            gap: 25px;
+        }
+    }
+
+    &-text {
+        font-family: 'Onest';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        color: $black;
+
+        @media (max-width: 1400px) {}
+
+        @media (max-width: 992px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        @media (max-width: 1400px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &-item {
+        border-radius: 10px;
+        padding: 40px 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 44px;
+        @include border-gradient;
+
+        @media (max-width: 1400px) {
+            padding: 20px
+        }
+
+        @media (max-width: 992px) {}
+
+        @media (max-width: 576px) {}
+
+        &.blue {
+            background: linear-gradient(103.13deg, #005A87 0%, #8FB2FF 101.6%);
+
+            .petrochemical-item-number,
+            .petrochemical-item-title,
+            .petrochemical-item-text {
+                color: $white;
+            }
+        }
+
+        &-header {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+
+            @media (max-width: 1400px) {}
+
+            @media (max-width: 992px) {}
+
+            @media (max-width: 576px) {
+                gap: 20px;
+            }
+        }
+
+        &-number {
+            font-family: 'Onest';
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: $black;
+
+            @media (max-width: 1400px) {}
+
+            @media (max-width: 992px) {}
+
+            @media (max-width: 576px) {
+                font-size: 14px;
+            }
+        }
+
+        &-title {
+            font-family: 'Onest';
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 100%;
+            color: $black;
+
+            @media (max-width: 1400px) {}
+
+            @media (max-width: 992px) {}
+
+            @media (max-width: 576px) {
+                font-size: 16px;
+            }
+        }
+
+        &-text {
+            font-family: 'Onest';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 130%;
+            color: $darkGrey;
+
+            @media (max-width: 1400px) {}
+
+            @media (max-width: 992px) {
+                font-size: 16px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 14px;
+            }
+        }
+
+        &-empty {
+            visibility: hidden;
+
+            @media (max-width: 1400px) {
+                display: none;
+            }
+
+            @media (max-width: 992px) {}
+
+            @media (max-width: 576px) {}
+        }
+
+        &-img {
+            background: linear-gradient(103.13deg, #005A87 0%, #8FB2FF 101.6%);
+            display: flex;
+            padding: 56px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+
+            img {
+                width: 100%;
+                max-height: 141px;
+
+            }
+        }
+
+    }
 }
