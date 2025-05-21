@@ -6151,3 +6151,190 @@ iframe {
         }
     }
 }
+
+.offers {
+    overflow: hidden;
+    padding: 75px 0;
+
+    @media (max-width: 1400px) {
+        padding: 75px 0px;
+    }
+
+    @media (max-width: 992px) {
+        padding: 50px 0;
+    }
+
+    @media (max-width: 576px) {
+        padding: 30px 0;
+    }
+
+    &-slider {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @media (max-width: 1400px) {
+            gap: 40px;
+        }
+
+        @media (max-width: 992px) {}
+
+        @media (max-width: 576px) {}
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                font-family: 'Onest';
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 120%;
+                @include text-gradient;
+
+                @media (max-width: 1400px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width: 992px) {}
+
+                @media (max-width: 576px) {
+                    font-size: 24px;
+                }
+            }
+
+            &-btns {
+                display: flex;
+                flex-direction: row;
+                gap: 12px;
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    position: relative;
+                    margin: 0;
+                    height: unset;
+                    width: unset;
+                    top: unset;
+                    right: unset;
+                    left: unset;
+                    bottom: unset;
+                }
+            }
+        }
+    }
+
+    &-block {
+        padding: 40px;
+        background-color: $white;
+        box-shadow: 0px 8px 16px 0px #00000014;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 22px;
+        height: 100%;
+        justify-content: space-between;
+        transition: all 0.6s ease;
+
+        &:hover {
+            background-color: transparent;
+            cursor: pointer;
+            box-shadow: unset
+        }
+
+        @media (max-width: 1400px) {}
+
+        @media (max-width: 992px) {
+            padding: 30px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 20px;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+        &-title {
+            font-family: 'Onest';
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 120%;
+            color: $main;
+
+            @media (max-width: 1400px) {
+                font-size: 26px;
+            }
+
+            @media (max-width: 992px) {}
+
+            @media (max-width: 576px) {
+                font-size: 20px;
+            }
+        }
+
+        &-description {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &-title {
+                font-family: 'Onest';
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 130%;
+                color: $black;
+
+                @media (max-width: 1400px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width: 992px) {
+                    font-size: 18px;
+                }
+
+                @media (max-width: 576px) {}
+            }
+
+            &-text {
+                font-family: 'Onest';
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 130%;
+                color: $black;
+
+                @media (max-width: 1400px) {}
+
+                @media (max-width: 992px) {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 14px;
+                }
+            }
+
+        }
+
+        &-img {
+            height: 129px;
+            width: auto;
+            object-fit: contain;
+            object-position: left;
+        }
+
+    }
+
+    &-swiper {
+        overflow: visible;
+
+        .swiper-slide {
+            height: auto;
+        }
+    }
+
+}
