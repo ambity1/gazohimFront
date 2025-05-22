@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="/assets/style/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="container d-flex flex-row justify-content-between align-items-center">
+            <a class="logo">
+                <picture>
+                    <source srcset="/assets/img/header/smllogohead.svg" media="(max-width: 1400px)">
+                    <source srcset="/assets/img/header/logohead.svg" media="(min-width: 1400px)">
+                    <img src="/assets/img/header/logohead.svg">
+                </picture>
+            </a>
+            <nav class="d-flex flex-row align-items-center">
+                <div class="dropdown elemfirst d-none d-sm-none d-lg-block">
+                    <a href="#" class="d-flex flex-row">
+                        Наши направления
+                        <img src="/assets/img/imgVar/chevron-down-blue.svg">
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="item">
+                            <div class="d-flex flex-column">
+                                <a href="#">Инжиниринг</a>
+                                <ul>
+                                    <li><a href="#">Комплексный инжиниринг</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <a href="#">Технологии</a>
+                                <ul>
+                                    <li><a href="#">Водородные технологии</a></li>
+                                    <li><a href="#">Цифровые технологии</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <a href="#">Исследования</a>
+                                <ul>
+                                    <li><a href="#">Наноинженерия</a></li>
+                                    <li><a href="#">Нейротехнологии</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="d-none d-sm-none d-lg-flex d-xxl-none">Проекты</a>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Новости</a>
+                <a href="#" class="d-none d-sm-none d-lg-none d-xxl-flex">Презентации</a>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Карьера</a>
+                <div class="dropdown elemsecond d-none d-sm-none d-lg-none d-xxl-block">
+                    <a href="#">О компании</a>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">История компании</a></li>
+                            <li><a href="#">Экспериментальная база</a></li>
+                            <li><a href="#">Сертификаты</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="d-none d-sm-none d-lg-flex">Контакты</a>
+                <button class="burger d-lg-flex d-xxl-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                    aria-controls="offcanvas">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                    <div class="offcanvas-header">
+                        <a data-bs-dismiss="offcanvas" aria-label="Закрыть"><img src="/assets/img/header/x.svg"></a>
+                    </div>
+                    <div class="offcanvas-body">
+                        <nav class="d-flex flex-column align-items-start">
+                            <div class="off-item d-flex flex-column">
+                                <a href="#">Наши направления <img class="d-none d-sm-block"
+                                        src="/assets/img/imgVar/chevron-down-white.svg"> <img class="d-block d-sm-none"
+                                        class="" src="/assets/img/imgVar/smlchevron-down-white.svg"></a>
+                                <ul>
+                                    <li><a href="#">Инжиниринг</a></li>
+                                    <li><a href="#">Технологии</a></li>
+                                    <li><a href="#">Исследования</a></li>
+                                </ul>
+                            </div>
+                            <a href="#">Проекты</a>
+                            <a href="#">Документы</a>
+                            <a href="#">Новости</a>
+                            <a href="#">Карьера</a>
+                            <div class="off-item d-flex flex-column">
+                                <a href="#">О компании <img class="d-none d-sm-block"
+                                        src="/assets/img/imgVar/chevron-down-white.svg"> <img class="d-block d-sm-none"
+                                        class="" src="/assets/img/imgVar/smlchevron-down-white.svg"></a>
+                                <ul>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">История компании</a></li>
+                                    <li><a href="#">Документы</a></li>
+                                </ul>
+                            </div>
+                            <a href="#">Контакты</a>
+                            <div class="off-contacts d-flex flex-column">
+                                <a class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/map-pin.svg">
+                                    <p>г. Уфа, улица Авроры,<br> д2 - головной офис</p>
+                                </a>
+                                <!--<div class="d-flex flex-row align-items-center"><img src="/assets/img/imgVar/map-pin.svg"><p>г. Москва, улица, д</p></div>-->
+                                <a href="tel:+73472940246" class="d-flex flex-row align-items-center"><img
+                                        src="/assets/img/imgVar/phone.svg">
+                                    <p>+7 (347) 294-02-46</p>
+                                </a>
+                                <a href="tel:+74999111101" class="d-flex flex-row align-items-center"><img
+                                        src="/assets/img/imgVar/phone.svg">
+                                    <p>+7 (499) 911-11-01</p>
+                                </a>
+                                <a href="mailto:mail@gashemeng.ru" class="d-flex flex-row align-items-center"><img
+                                        src="/assets/img/imgVar/mail.svg">
+                                    <p>mail@gashemeng.ru</p>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <a href="#" class="tgwidget">
+        <div class="position-relative">
+            <img class="position-absolute d-none d-sm-block icon" src="/assets/img/imgVar/tgvector.svg">
+            <img class="position-absolute d-none d-sm-block back" src="/assets/img/imgVar/ellipse.svg">
+            <div class="position-absolute d-none d-sm-block textblock"><img class="text"
+                    src="/assets/img/imgVar/text.svg"></div>
+            <img class="position-absolute d-block d-sm-none icon" src="/assets/img/imgVar/smltgvector.svg">
+            <img class="position-absolute d-block d-sm-none back" src="/assets/img/imgVar/smlellipse.svg">
+            <div class="position-absolute d-block d-sm-none textblock"><img class="text"
+                    src="/assets/img/imgVar/smltext.svg"></div>
+        </div>
+    </a>
+    <main>
+        <section class="banner">
+            <div class="banner-bg">
+                <picture>
+                    <source srcset="/assets/img/university/banner/320.webp" media="(max-width: 576px)">
+                    <source srcset="/assets/img/university/banner/576.webp"
+                        media="(max-width: 992px) and (min-width: 576px)">
+                    <source srcset="/assets/img/university/banner/1000.webp"
+                        media="(max-width: 1400px) and (min-width: 992px)">
+                    <source srcset="/assets/img/university/banner/1440.webp" media="(min-width: 1400px)">
+                    <img src="/assets/img/university/banner/1440.webp">
+                </picture>
+            </div>
+            <div class="banner-content container d-flex flex-row justify-content-center h-100">
+                <div class="indicator_1 d-none d-lg-flex">
+                    <div class="indicator-item">
+                        <div class="indicator">
+                            <img class="indicator-img" src="/assets/img/direction/indicator.svg">
+                            <p class="indicator-value">50+</p>
+                        </div>
+                        <p class="indicator-text">
+                            уникальных курсов, доступных всем сотрудникам
+                        </p>
+                    </div>
+                </div>
+                <div class="banner-header d-flex flex-column justify-content-center">
+                    <h1>Корпоративный университет
+                        Газохим Инжиниринг</h1>
+                    <div>
+                        <p>Мы поддерживаем профессиональное развитие сотрудников компании, стремимся не только повышать
+                            квалификацию, но и формировать у наших специалистов навыки, соответствующие современным
+                            требованиям отрасли</p>
+                    </div>
+                </div>
+                <div class="indicator_1">
+                    <div class="indicator-item">
+                        <div class="indicator">
+                            <img class="indicator-img" src="/assets/img/direction/indicator.svg">
+                            <p class="indicator-value">1500</p>
+                        </div>
+                        <p class="indicator-text">
+                            часов ежегодного обучения
+                        </p>
+                    </div>
+                    <div class="indicator-item">
+                        <div class="indicator">
+                            <img class="indicator-img" src="/assets/img/direction/indicator.svg">
+                            <p class="indicator-value">98%</p>
+                        </div>
+                        <p class="indicator-text">
+                            удовлетворённость сотрудников интерактивными форматами
+                        </p>
+                    </div>
+                    <div class="indicator-item">
+                        <div class="indicator">
+                            <img class="indicator-img" src="/assets/img/direction/indicator.svg">
+                            <p class="indicator-value">50+</p>
+                        </div>
+                        <p class="indicator-text">
+                            уникальных курсов, доступных всем сотрудникам
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section-indicators">
+            <div class="indicator-item">
+                <div class="indicator">
+                    <img class="indicator-img" src="/assets/img/direction/indicator.svg">
+                    <p class="indicator-value">1500</p>
+                </div>
+                <p class="indicator-text">
+                    часов ежегодного обучения
+                </p>
+            </div>
+            <div class="indicator-item">
+                <div class="indicator">
+                    <img class="indicator-img" src="/assets/img/direction/indicator.svg">
+                    <p class="indicator-value">98%</p>
+                </div>
+                <p class="indicator-text">
+                    удовлетворённость сотрудников интерактивными форматами
+                </p>
+            </div>
+            <div class="indicator-item">
+                <div class="indicator">
+                    <img class="indicator-img" src="/assets/img/direction/indicator.svg">
+                    <p class="indicator-value">50+</p>
+                </div>
+                <p class="indicator-text">
+                    уникальных курсов, доступных всем сотрудникам
+                </p>
+            </div>
+        </section>
+        <section class="functions-university">
+            <div class="functions-university-wrapper">
+                <div class="container">
+                    <div class="functions-university-header">
+                        <h3 class="header-section">Функции университета</h3>
+                        <p class="functions-university-header-text">
+                            Корпоративный университет помогает нашим сотрудникам достигать новых карьерных высот, а
+                            компании
+                            — реализовывать амбициозные проекты  и стремиться к лидерству в своей сфере, активно
+                            применять
+                            полученные знания в повседневной работе
+                        </p>
+                    </div>
+                </div>
+                <div class="container-sm">
+                    <div class="functions-university-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="functions-university-item blue">
+                                    <div class="functions-university-item-head">
+                                        <p class="functions-university-item-number">[01]</p>
+                                        <p class="functions-university-item-text">
+                                            Дополнительные практические занятия внутри компании
+                                        </p>
+                                    </div>
+                                    <img class="functions-university-item-img"
+                                        src="/assets/img/university/sphere_light.svg">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="functions-university-item">
+                                    <div class="functions-university-item-head">
+                                        <p class="functions-university-item-number">[02]</p>
+                                        <p class="functions-university-item-text">
+                                            Доступ к образовательным курсам
+                                        </p>
+                                    </div>
+                                    <img class="functions-university-item-img"
+                                        src="/assets/img/university/sphere_dark.svg">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="functions-university-item">
+                                    <div class="functions-university-item-head">
+                                        <p class="functions-university-item-number">[03]</p>
+                                        <p class="functions-university-item-text">
+                                            Доступ к магистерским программам ведущих образовательных учреждений
+                                        </p>
+                                    </div>
+                                    <img class="functions-university-item-img"
+                                        src="/assets/img/university/sphere_dark.svg">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="functions-university-item blue">
+                                    <div class="functions-university-item-head">
+                                        <p class="functions-university-item-number">[04]</p>
+                                        <p class="functions-university-item-text">
+                                            Доступ к программам повышения квалификации
+                                        </p>
+                                    </div>
+                                    <img class="functions-university-item-img"
+                                        src="/assets/img/university/sphere_light.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="functions-university-btns">
+                            <div class="swiper-button-prev swiper-button-prev-functions-university"><img
+                                    class="d-none d-sm-block" src="/assets/img/imgVar/left-arrow-blue.svg"><img
+                                    class="d-block d-sm-none" src="/assets/img/imgVar/smlleft-arrow-blue.svg"></div>
+                            <div class="swiper-button-next swiper-button-next-functions-university"><img
+                                    class="d-none d-sm-block" src="/assets/img/imgVar/right-arrow-blue.svg"><img
+                                    class="d-block d-sm-none" src="/assets/img/imgVar/smlright-arrow-blue.svg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const swiper2 = new Swiper('.functions-university-swiper', {
+                    direction: 'horizontal',
+                    loop: false,
+                    spaceBetween: 20,
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1.1,
+                            spaceBetween: 10
+                        },
+
+                        576: {
+                            slidesPerView: 2.5,
+                        },
+
+                        992: {
+                            slidesPerView: 4,
+                        },
+                        1400: {
+                            slidesPerView: 4,
+                        },
+                    },
+
+                    navigation: {
+                        nextEl: '.swiper-button-next-functions-university',
+                        prevEl: '.swiper-button-prev-functions-university',
+                    },
+                })
+            })
+        </script>
+        <section class="corporate-learning">
+            <div class="container corporate-learning-container">
+                <h3 class="header-section">Проводим корпоративное обучение по техническим направлениям</h3>
+                <div class="corporate-learning-list">
+                    <div class="corporate-learning-item">
+                        <p class="corporate-learning-item-number">[01]</p>
+                        <p class="corporate-learning-item-text">
+                            Искусственный интеллект
+                        </p>
+                        <img class="corporate-learning-item-img" src="/assets/img/university/learning/1.svg">
+                    </div>
+                    <div class="corporate-learning-item blue">
+                        <p class="corporate-learning-item-number">[02]</p>
+                        <p class="corporate-learning-item-text">
+                            Нефтегазохимия
+                        </p>
+                        <img class="corporate-learning-item-img" src="/assets/img/university/learning/2.svg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="assistent">
+            <div class="container">
+                <div class="assistent-wrapper">
+                    <div class="assistent-content">
+                        <h3 class="header-section">Идеальный помощник - GASCHEM.AI</h3>
+                        <p class="assistent-text">
+                            Создали виртуального специалиста-помощника, который поможет упростить сложности адаптации
+                            новых сотрудников, а также улучшить качество работы наших ценных кадров.  Мы уже готовы
+                            предоставить продукт на внешний рынок!
+                        </p>
+                        <a href="./assets/pdf/hydrogen_technologies.pdf" download target="_blank" rel="noreferrer">
+                            <button class="button-main button-img">
+                                Скачать презентацию<img src="/assets/img/imgVar/download.svg">
+                            </button>
+                        </a>
+                    </div>
+                    <div class="assistent-img">
+                        <img class="assistent-img-main" src="/assets/img/university/assistent.webp">
+                        <img class="assistent-img-vector" src="/assets/img/university/vector.svg">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section class="lll">
+            <div class="lll-wrapper">
+                <div class="lll-background">
+                    <picture>
+                        <source srcset="/assets/img/university/lll/320.webp" media="(max-width: 576px)">
+                        <source srcset="/assets/img/university/lll/576.webp"
+                            media="(max-width: 992px) and (min-width: 576px)">
+                        <source srcset="/assets/img/university/lll/1000.webp"
+                            media="(max-width: 1400px) and (min-width: 992px)">
+                        <source srcset="/assets/img/university/lll/1440.webp" media="(min-width: 1400px)">
+                        <img class="lll-background-img" src="/assets/img/university/lll/1440.webp">
+                    </picture>
+                </div>
+                <div class="container">
+                    <div class="lll-content">
+                        <h3 class="header-section">
+                            КОМПАНИЯ ЖИВЕТ ПО ПРИНЦИПУ  LLL (LONG LIFE LEARNING)</br>
+                            <span>Мы постоянно обучаемся </br>и углубляем компетенции своих сотрудников</span>
+                        </h3>
+                        <p class="lll-text">
+                            Начиная с генерального директора, </br>который является доктором наук, профессором </br>и
+                            ежегодно проходит новые образовательные треки. </br>Шеф задает нам темп развития, и мы его
+                            поддерживаем
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <section class="centred-know-more">
+            <div class="container">
+                <div class="know-more-all">
+                    <picture>
+                        <source srcset="/assets/img/about-company/discuss-project-320.webp" media="(max-width: 576px)">
+                        <source srcset="/assets/img/about-company/discuss-project-576.webp"
+                            media="(max-width: 992px) and (min-width: 576px)">
+                        <source srcset="/assets/img/about-company/discuss-project-1000.webp"
+                            media="(max-width: 1400px) and (min-width: 992px)">
+                        <source srcset="/assets/img/about-company/discuss-project-1400.webp"
+                            media="(min-width: 1400px)">
+                        <img src="/assets/img/about-company/discuss-project-1400.webp">
+                    </picture>
+                    <div class="know-more-all-block d-flex flex-column align-items-start">
+                        <div class="know-more-all-block-text d-flex flex-column">
+                            <h2><span>Обсудим Ваш проект</span></h2>
+                            <p>Если Вы не нашли ответ на свой вопрос или подходящую вакансию, то напишите нам на
+                                почту и мы с Вами свяжемся!</p>
+                        </div>
+                        <div class="know-more-all-block-btns">
+                            <button class="button-main button-img" type="button" data-bs-toggle="modal"
+                                data-bs-target="#modal">Оставить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-all d-flex flex-column">
+                    <div class="footer-all-top d-flex justify-content-between">
+                        <div>
+                            <img src="/assets/img/footer/logofoot.svg">
+                        </div>
+                        <div class="footer-all-top-nav">
+                            <div class="footer-all-top-nav-menu">
+                                <div class="footer-all-top-nav-ul d-flex flex-column">
+                                    <h3><a>Наши направления</a></h3>
+                                    <ul class="d-flex flex-column">
+                                        <li><a href="#">Инжиниринг</a></li>
+                                        <li><a href="#">Технологии</a></li>
+                                        <li><a href="#">Исследования</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-all-top-nav-ul d-flex flex-column">
+                                    <h3><a>Компания</a></h3>
+                                    <ul class="d-flex flex-column">
+                                        <li><a href="#">О компании</a></li>
+                                        <li><a href="#">Проекты</a></li>
+                                        <li><a href="#">Презентации и документы</a></li>
+                                        <li><a href="#">Новости</a></li>
+                                        <li><a href="#">Карьера</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-all-top-nav-inf">
+                                <div class="footer-all-top-nav-number d-flex flex-column">
+                                    <h3>Тел.:</h3>
+                                    <a href="tel:+7 (347) 294-02-46">+7 (347) 294-02-46</a>
+                                </div>
+                                <div class="footer-all-top-nav-contacts">
+                                    <div class="d-flex flex-column">
+                                        <h3>Напишите нам:</h3>
+                                        <a href="mailto:mail@gashemeng.ru">mail@gashemeng.ru</a>
+                                        <a href="#">TG: @gaschemeng.ru</a>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h3>Свяжитесь с нами:</h3>
+                                        <a href="#">г. Уфа, ул. Авроры, д2</a>
+                                        <a href="#">г. Москва, ул. , д</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-all-bottom d-flex justify-content-between">
+                        <p>2017-2024 - 000 “Газохим Инжиниринг</p>
+                        <a href="#">Политика конфиденциальности</a>
+                        <a class="footer-all-bottom-ambity" href="https://ambity.ru/">Разработка сайта<span> -
+                                Амбити</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+</body>
+
+</html>
