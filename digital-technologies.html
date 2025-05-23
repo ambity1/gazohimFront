@@ -436,8 +436,8 @@
                                 почту и мы с Вами свяжемся!</p>
                         </div>
                         <div class="know-more-all-block-btns">
-                            <button class="button-main button-img" type="button" data-bs-toggle="modal"
-                                data-bs-target="#modal">Оставить заявку</button>
+                            <button class="askMe askMeConsultation button-main button-img" type="button"
+                                data-bs-toggle="modal" data-bs-target="#modal">Оставить заявку</button>
                         </div>
                     </div>
                 </div>
@@ -445,6 +445,232 @@
         </section>
 
     </main>
+    <div class="ask ask-call d-flex align-items-center justify-content-center">
+        <div class="askBckg"></div>
+        <div class="askBlockWrapper d-flex justify-content-center">
+            <div class="askBlock">
+                <div class="askClose"></div>
+                <form class="askBlockForm d-flex flex-column" autocomplete="off">
+                    <div class="askBlockHeaderWrapper d-flex flex-column">
+                        <h5 class="askBlockHeader">Получить специальное предложение</h5>
+                        <p>Оставьте свои данные и мы перезвоним Вам как можно скорее</p>
+                    </div>
+                    <div class="askBlockFields d-flex flex-column">
+                        <div class="askBlockFieldWrapper d-flex flex-column">
+                            <label for="askname">Как к Вам обращаться*</label>
+                            <input name="name" class="input" placeholder="Фамилия и имя" type="text" required
+                                id="askname" autocomplete="off" />
+                        </div>
+                        <div class="askBlockFieldWrapperCommon d-flex flex-column">
+                            <div class="askBlockFieldWrapper d-flex flex-column">
+                                <label for="phone">Телефон*</label>
+                                <div class="input-wrapper d-flex flex-column">
+                                    <input name="phone" class="input masked" placeholder="Номер телефона" type="text"
+                                        required id="phone" autocomplete="off" />
+                                </div>
+
+                            </div>
+                            <div class="askBlockFieldWrapper d-flex flex-column">
+                                <label for="email">Ваша почта*</label>
+                                <div class="input-wrapper d-flex flex-column">
+                                    <input name="email" class="input" placeholder="E-mail" type="email" required
+                                        id="email" autocomplete="off" />
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="askBlockFieldWrapper d-flex flex-column">
+                            <label for="text">Тема вашего проекта</label>
+                            <textarea name="text" class="input" placeholder="Детали проекта" type="text" required
+                                id="text" autocomplete="off" rows="4" cols="50"></textarea>
+
+                        </div>
+                    </div>
+                    <div class="askBlockPolicyAndBtn d-flex flex-column">
+                        <button class="button-main w-100">Отправить</button>
+                        <p class="text-center mb-0">Нажимая на кнопку, вы соглашаетесь <br>с <a href="/policy">политикой
+                                конфиденциальности</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="ask ask-ok d-flex align-items-center justify-content-center">
+        <div class="askBckg"></div>
+        <div class="askOk d-flex flex-column align-items-center">
+            <div class="askOkClose" onclick="document.querySelector('.ask.ask-ok').classList.remove('active')"></div>
+            <img class="askOkImage" src="./assets/img/modal/ok.svg" alt="">
+            <div class="askOkText d-flex flex-column">
+                <p class="askOkHeader mb-0 text-center">Успешно отправлено!</p>
+                <p class="askOkDescription mb-0 text-center">Скоро свяжемся с Вами</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let modal = document.querySelector('.ask.ask-call');
+            let modalHeader = modal.querySelector('.askBlockHeader');
+            let modalBckg = modal.querySelector('.askBckg');
+            let modalForm = modal.querySelector('.askBlockForm');
+            let close = modal.querySelector('.askClose');
+
+            const phoneWrapper = modalForm.querySelector('.askBlockFields .input-wrapper');
+            const phoneInput = modalForm.querySelector('#phone');
+
+            let modalOk = document.querySelector('.ask.ask-ok');
+            let askMe = [...document.querySelectorAll('.askMe.askMeConsultation')];
+
+            askMe.forEach((item) => {
+                item.addEventListener('click', () => {
+                    modal.classList.remove('fromAskMeConsultation'); //добавить классы если добавятся новые модалки
+                    if (item.classList.contains('askMeConsultation')) {
+                        modalHeader.innerText = "Оставить заявку";
+                        modal.classList.add('fromAskMeConsultation');
+                    }
+
+                    modal.classList.add('active');
+                    document.body.style.overflowY = 'hidden';
+                });
+            });
+            modalBckg.addEventListener('click', () => {
+                modal.classList.remove('active');
+                document.body.style.overflowY = '';
+            });
+            close.addEventListener('click', () => {
+                modal.classList.remove('active');
+                document.body.style.overflowY = '';
+            });
+
+            phoneInput.classList.contains("attention") ? removeAttentionClass(phoneInput) : '';
+
+            modalForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                let data = new FormData(modalForm);
+                if (data.get('phone').split(/[-_()^\s*+$]+/).join('').length === 11) {
+                    modalForm.querySelector('button').setAttribute('disabled', 'disabled');
+                    if (modal.classList.contains('fromAskMeConsultation')) {
+                        // data.append('target', 'Заказать звонок');
+                        // data.append('method', 'sendZayavka');
+                        // try {
+                        //     ym(95565168,'reachGoal','consult');
+                        // } catch (err) {
+                        //     console.log('');
+                        // }
+                    }
+
+                    fetch('/api/deal/little', {
+                        method: 'post',
+                        body: data
+                    }).then(resp => resp.json())
+                        .then(result => {
+                            if (result.status) {
+                                modal.classList.remove('active');
+                                modalOk.classList.add('active')
+                            }
+                        })
+                        .catch(() => {
+                            alert("Произошла ошибка отправки запроса. Повторите попытку!")
+                        })
+                } else {
+                    addErrorMessage(phoneWrapper, 'Заполните обязательное поле');
+                    addAttentionClass(phoneInput);
+                }
+            });
+
+            function addAttentionClass(input) {
+                input.classList.add('attention');
+            }
+            function removeAttentionClass(input) {
+                input.classList.remove('attention');
+            }
+            function removeErrorMessages(wrapper) {
+                const existingErrors = wrapper.querySelectorAll('.attention-text');
+                existingErrors.forEach(error => error.remove());
+            }
+            document.getElementById('phone').addEventListener('input', function () {
+                removeAttentionClass(this);
+                removeErrorMessages(this.closest('.input-wrapper'));
+            });
+            function addErrorMessage(wrapper, message) {
+                const existingErrors = wrapper.querySelectorAll('.attention-text');
+                const isMessageExists = Array.from(existingErrors).some(
+                    (error) => error.textContent === message
+                );
+
+                if (!isMessageExists) {
+                    const errorMessage = document.createElement('p');
+                    errorMessage.className = 'attention-text';
+                    errorMessage.textContent = message;
+                    wrapper.appendChild(errorMessage);
+                }
+            }
+
+        })
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let masked = document.querySelectorAll('.masked');
+            // Функция для применения маски к полю ввода
+            function applyPhoneMask(input) {
+                Inputmask({
+                    mask: "+7 (999) 999 99 99",
+                    clearIncomplete: false,
+                    showMaskOnHover: false,
+                    onBeforeMask: function (value, opts) {
+                        // Проверяем, начинается ли номер с "8"
+                        if (value.startsWith("8") || value.startsWith("7")) {
+                            // Убираем "8" и добавляем "+7"
+                            return "+7" + value.slice(1);
+                        }
+                        if (value.startsWith("+8")) {
+                            return "+7" + value.slice(2);
+                        }
+                        if (value.startsWith("+7")) {
+                            return "+7" + value.slice(2);
+                        }
+                        return value;
+                    }
+                }).mask(input);
+            }
+
+            masked.forEach(item => {
+                item.addEventListener("input", (e) => {
+                    if (e.target.value.length === 1) {
+                        if (e.target.value === "8" || e.target.value === "7") {
+                            e.target.value = '';
+                            if (!e.target.inputmask) {
+                                applyPhoneMask(item);
+                            }
+                        }
+                    } else if (e.target.value.length === 2) {
+                        if (e.target.value === "+7") {
+                            e.target.value = '';
+                            if (!e.target.inputmask) {
+                                applyPhoneMask(item);
+                            }
+                        } else {
+                            if (!e.target.inputmask) {
+                                applyPhoneMask(item);
+                            }
+                        }
+                    } else if (e.target.value.length === 0) {
+                        if (e.target.inputmask) {
+                            e.target.inputmask.remove()
+                        }
+                    } else {
+                        if (!e.target.inputmask) {
+                            applyPhoneMask(item);
+                        }
+                    }
+                })
+            });
+        });
+    </script>
+
     <footer>
         <div class="footer">
             <div class="container">
@@ -508,6 +734,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/inputmask.min.js"></script>
+
 </body>
 
 </html>

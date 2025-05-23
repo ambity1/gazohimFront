@@ -6517,4 +6517,255 @@ iframe {
   .lll-text {
     font-size: 16px;
   }
+}
+.ask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.ask.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.ask.active .askBlockWrapper {
+  transform: translateY(0);
+}
+.askBckg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.4);
+}
+.askClose {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.askClose::after, .askClose::before {
+  content: "";
+  height: 2px;
+  width: 20px;
+  background-color: #215B94;
+  position: absolute;
+  border-radius: 10px;
+}
+.askClose::before {
+  transform: rotate(45deg);
+}
+.askClose::after {
+  transform: rotate(-45deg);
+}
+.askBlock {
+  padding: 40px;
+  background-color: #FFFFFF;
+  width: 540px;
+  position: relative;
+  border-radius: 20px;
+}
+.askBlockHeaderWrapper {
+  row-gap: 14px;
+}
+.askBlockHeaderWrapper h5 {
+  font-family: "Bicubik";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+.askBlockHeaderWrapper p {
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+}
+.askBlockWrapper {
+  transform: translateY(-100px);
+  transition: transform 0.3s ease;
+}
+.askBlockForm {
+  row-gap: 24px;
+}
+.askBlockField {
+  width: 100%;
+  position: relative;
+}
+.askBlockFieldWrapper {
+  row-gap: 12px;
+}
+.askBlockFieldWrapper .label {
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 134%;
+  color: #424242;
+}
+.askBlockFieldWrapperCommon {
+  row-gap: 15px;
+}
+.askBlockFields {
+  gap: 24px;
+}
+.askBlockFields .select-service-container,
+.askBlockFields .select-experience-container {
+  row-gap: 24px;
+}
+.askBlockFields .select-service-container p,
+.askBlockFields .select-experience-container p {
+  font-size: 20px;
+  margin-bottom: 2px;
+  line-height: 130%;
+  font-weight: 500;
+  color: #424242;
+}
+.askBlockPolicyAndBtn {
+  row-gap: 20px;
+}
+.askBlockPolicyAndBtn p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #424242;
+}
+.askBlockPolicyAndBtn p a {
+  color: #424242;
+}
+.askOk {
+  row-gap: 12px;
+  padding: 40px 31px;
+  width: 345px;
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+.askOkImage {
+  width: 44px;
+  height: 44px;
+}
+.askOkText {
+  row-gap: 12px;
+}
+.askOkHeader {
+  font-size: 22px;
+  font-family: "Bicubik";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-transform: uppercase;
+  gap: 12px;
+  color: #215B94;
+}
+.askOkDescription {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: #424242;
+}
+.askOkClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.askOkClose::after, .askOkClose::before {
+  content: "";
+  height: 2px;
+  width: 20px;
+  background-color: #215B94;
+  position: absolute;
+  border-radius: 10px;
+}
+.askOkClose::before {
+  transform: rotate(45deg);
+}
+.askOkClose::after {
+  transform: rotate(-45deg);
+}
+@media (max-width: 575.96px) {
+  .askBlock {
+    padding: 30px 20px;
+    width: calc(100% - 20px);
+    max-width: 320px;
+    min-width: 280px;
+  }
+  .askBlockHeaderWrapper h5 {
+    font-size: 20px;
+  }
+  .askBlockHeaderWrapper p {
+    font-size: 14px;
+  }
+  .askBlockForm {
+    row-gap: 14px;
+  }
+  .askBlockFieldWrapper .label {
+    font-size: 16px;
+  }
+  .askBlockFields {
+    gap: 14px;
+  }
+  .askBlockFields .select-service-container p,
+  .askBlockFields .select-experience-container p {
+    font-size: 16px;
+  }
+  .askBlockPolicyAndBtn {
+    row-gap: 14px;
+  }
+  .askBlockPolicyAndBtn p {
+    font-size: 14px;
+  }
+  .askOk {
+    padding: 30px 24px;
+    width: calc(100% - 3px);
+    max-width: 500px;
+    min-width: 303px;
+    gap: 12px;
+  }
+  .askOkText {
+    gap: 10px;
+  }
+  .askOkHeader {
+    font-size: 18px;
+    gap: 10px;
+  }
+  .askOkDescription {
+    font-size: 14px;
+  }
+}
+
+.attention-text {
+  color: red;
+}
+
+input {
+  height: 49px;
+  padding: 14px;
+  background-color: #F7F7F7;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+textarea {
+  padding: 14px;
+  background-color: #F7F7F7;
+  border-radius: 8px;
+  border: 1px solid transparent;
 }/*# sourceMappingURL=style.css.map */

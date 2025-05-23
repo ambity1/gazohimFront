@@ -7305,3 +7305,316 @@ iframe {
         @media (max-width: 576px) {}
     }
 }
+
+.ask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+
+        .askBlockWrapper {
+            transform: translateY(0);
+        }
+    }
+
+    &Bckg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    &Close {
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::after,
+        &::before {
+            content: "";
+            height: 2px;
+            width: 20px;
+            background-color: $main;
+            position: absolute;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &Block {
+        padding: 40px;
+        background-color: $white;
+        width: 540px;
+        position: relative;
+        border-radius: 20px;
+
+        &HeaderWrapper {
+            row-gap: 14px;
+
+            h5 {
+                font-family: "Bicubik";
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 130%;
+                text-transform: uppercase;
+
+            }
+
+            p {
+                font-family: 'Onest';
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 130%;
+
+            }
+        }
+
+        &Wrapper {
+            transform: translateY(-100px);
+            transition: transform .3s ease;
+        }
+
+        &Form {
+            row-gap: 24px;
+        }
+
+        &Field {
+            width: 100%;
+            position: relative;
+
+            &Wrapper {
+                row-gap: 12px;
+
+                .label {
+                    font-family: 'Onest';
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 134%;
+                    color: $black;
+
+                }
+
+                &Common {
+                    row-gap: 15px;
+                }
+            }
+        }
+
+        &Fields {
+            gap: 24px;
+
+            .select-service-container,
+            .select-experience-container {
+                row-gap: 24px;
+
+                p {
+                    font-size: 20px;
+                    margin-bottom: 2px;
+                    line-height: 130%;
+                    font-weight: 500;
+                    color: $black;
+                }
+            }
+        }
+
+        &PolicyAndBtn {
+            row-gap: 20px;
+
+            p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 130%;
+                color: $black;
+
+                a {
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    &Ok {
+        row-gap: 12px;
+        padding: 40px 31px;
+        width: 345px;
+        position: relative;
+        background-color: $white;
+        border-radius: 10px;
+
+        &Image {
+            width: 44px;
+            height: 44px;
+        }
+
+        &Text {
+            row-gap: 12px;
+        }
+
+        &Header {
+            font-size: 22px;
+            font-family: "Bicubik";
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 130%;
+            text-transform: uppercase;
+            gap: 12px;
+            color: $main;
+        }
+
+        &Description {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 130%;
+            color: $black;
+        }
+
+        &Close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::after,
+            &::before {
+                content: "";
+                height: 2px;
+                width: 20px;
+                  background-color: $main;
+                position: absolute;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    @media (max-width: 575.96px) {
+        &Block {
+            padding: 30px 20px;
+            width: calc(100% - 20px);
+            max-width: 320px;
+            min-width: 280px;
+
+            &HeaderWrapper {
+                h5 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            &Form {
+                row-gap: 14px;
+            }
+
+            &Field {
+                &Wrapper {
+                    .label {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &Fields {
+                gap: 14px;
+
+                .select-service-container,
+                .select-experience-container {
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &PolicyAndBtn {
+                row-gap: 14px;
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &Ok {
+            padding: 30px 24px;
+            width: calc(100% - 3px);
+            max-width: 500px;
+            min-width: 303px;
+            gap: 12px;
+
+            &Text {
+                gap: 10px;
+            }
+
+            &Header {
+                font-size: 18px;
+                gap: 10px;
+            }
+
+            &Description {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.attention-text {
+    color: red;
+}
+
+input {
+    height: 49px;
+    padding: 14px;
+    background-color: $lightGray;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+textarea {
+    padding: 14px;
+    background-color: $lightGray;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
